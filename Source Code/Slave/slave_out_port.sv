@@ -33,8 +33,8 @@ module slave_out_port (
             if (handshake == 1)
             begin
                 data_state <= DATA_TX;
-                tx_data <= data_input[1];
-                data_counter <= data_counter + 4'd2;
+                tx_data <= data_input[0];
+                data_counter <= data_counter + 4'd1;
                 data_idle <= 0;
                 s_tx_done <= 0;
 
