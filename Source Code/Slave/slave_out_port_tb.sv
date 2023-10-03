@@ -25,16 +25,13 @@ module slave_out_port_tb;
 
   initial begin
     $dumpfile("dump.vcd"); $dumpvars;
-    
-    @(posedge clk)  #1  rstn <= 1; m_ready <= 0; data_input <= 8'b11001100; s_valid <= 1;
-        
     #(CLK_PERIOD*3)
-    @(posedge clk)  #1  m_ready <= 1;
+    @(posedge clk)  #1  rstn <= 1; m_ready <= 0; data_input <= 8'b10100100; s_valid <= 1;
+        
     
-    #(CLK_PERIOD*2)
 
     @(posedge clk)  #1   m_ready <= 1;
-    #(CLK_PERIOD*2)
+    #(CLK_PERIOD*10)
 
     @(posedge clk)  #1   m_ready <= 0;
     
