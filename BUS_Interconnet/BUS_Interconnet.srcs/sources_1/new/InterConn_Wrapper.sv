@@ -17,7 +17,7 @@ module InterConn_Wrapper(
 
     ////////////////////////////////////////////////////////////  MULTIPLEXER  //////////////////////////////////////////////////////////////
     // PINS for the Master 1
-    output logic M1_DATA_RX,
+    output logic M1_RX_DATA,
     output logic M1_SLAVE_READY,
     input logic M1_CLK,
     input logic M1_RST,
@@ -29,7 +29,7 @@ module InterConn_Wrapper(
 
 
     // PINS for the Master 2
-    output logic M2_DATA_RX,
+    output logic M2_RX_DATA,
     output logic M2_SLAVE_READY,
     input logic M2_CLK,
     input logic M2_RST,
