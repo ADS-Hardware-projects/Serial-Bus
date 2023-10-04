@@ -1,7 +1,7 @@
 module InterConn_Multiplexer(
     // Data signals from the arbitter
-    output logic [0:1] bus_grant, // 2 bit register to send to MUX. This select which master has the grant
-    output logic [0:1] slave_select, // 2 bit register to select which slave to select
+    input logic [0:1] bus_grant, // 2 bit register to send to MUX. This select which master has the grant
+    input logic [0:1] slave_select, // 2 bit register to select which slave to select
 
     // PINS for the Master 1
     output logic M1_DATA_RX,
