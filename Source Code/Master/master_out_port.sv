@@ -22,6 +22,7 @@ module master_out_port#(parameter SLAVE_NO = 5, parameter SLAVE_ADDR_SIZE = 12, 
 
     output logic addr_bus,
     output logic w_data_bus,
+    output logic burst_size_bus,
 
 
     
@@ -33,6 +34,7 @@ module master_out_port#(parameter SLAVE_NO = 5, parameter SLAVE_ADDR_SIZE = 12, 
     output logic addr_done,
     output logic tx_done,
     output logic split_on,
+    output logic burst_done,
 
     //outputs to arbiter
 
@@ -50,12 +52,13 @@ module master_out_port#(parameter SLAVE_NO = 5, parameter SLAVE_ADDR_SIZE = 12, 
 
 logic [3:0] state;
 
-parameter IDLE = 1, BUS_REQ=2, BUS_GRANTED = 3, SLAVE_READ = 4, SLAVE_B_READ=5, SLAVE_WRITE=6,SLAVE_B_WRITE=7, ADDR_TX=8, DATA_TX=9, SPLIT=10;
+parameter IDLE = 1, BUS_REQ=2, BUS_GRANTED = 3, SLAVE_READ = 4, SLAVE_B_READ=5, SLAVE_WRITE=6,SLAVE_B_WRITE=7, ADDR_TX=8, DATA_TX=9, SPLIT=10, BURST_TX=11;
 parameter S_READ = 1, S_WRITE = 2, S_B_READ = 3, S_B_WRITE = 4;
 
 integer addr_count;
 integer data_count;
 integer word_count;
+integer burst_count;
 
 always @(posedge clk or negedge rst_n)
 begin
@@ -73,6 +76,8 @@ begin
         word_count <=0;
         bus_util <=0;
         split_on <= 0;
+        burst_count <= 0;
+        burst_done <= 0;
 
 
     end
@@ -107,6 +112,8 @@ begin
             m_valid <= 0;
             bus_util <=0;
             split_on <= 0;
+            burst_count <= 0;
+            burst_done <= 0;
 
 
 
@@ -263,24 +270,37 @@ begin
                 addr_bus <= s_addr[addr_count];
                 addr_done <= 1;
 
-                if (read_en ==1)
+                if (instruction==S_B_READ)
                 begin
                     
-                    state <= IDLE;
-                end
-                else (read_en ==0)
-                begin
-                    state <= DATA_TX;
+                    state <= BURST_TX;
+
                 end
 
-                if (instruction == S_READ | instruction == S_B_READ )
-                begin
-                    read_en <= 1;
-                end
                 else
                 begin
-                    read_en <= 0;
+
+                    if (read_en ==1)
+                    begin
+                        
+                        state <= IDLE;
+                    end
+                    else (read_en ==0)
+                    begin
+                        state <= DATA_TX;
+                    end
+
+                    if (instruction == S_READ | instruction == S_B_READ )
+                    begin
+                        read_en <= 1;
+                    end
+                    else
+                    begin
+                        read_en <= 0;
+                    end                    
                 end
+
+
 
             end
 
@@ -296,6 +316,29 @@ begin
                 state <= ADDR_TX;
             end            
 
+        end
+///////////////////////////////////////////////////////////////////////////////////
+
+        BURST_TX:
+        begin
+            if (burst_count>= BURST_SIZE-1)
+            begin
+                burst_size_bus <= burst_size[burst_count];
+                state <= IDLE;
+                burst_done <= 1;
+
+
+            end
+
+            else
+            begin
+                burst_count <= burst_count + 1;
+                burst_size_bus <= burst_size[burst_count];
+                state <= BURST_TX;
+
+
+
+            end
         end
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -317,6 +360,7 @@ begin
 
                 write_en <= 1;
                 data_count <= 0;
+                w_data_bus <= m_data[data_count];
 
                 if (word_count >=burst_size-1)
                 begin
@@ -332,7 +376,7 @@ begin
    
 
                 end
-                state <= IDLE;
+                // state <= IDLE;
 
             end
 
