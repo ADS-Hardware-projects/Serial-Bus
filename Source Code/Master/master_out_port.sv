@@ -284,7 +284,7 @@ begin
 
                 addr_bus <= s_addr[addr_count];
                 addr_done <= 1;
-                if (instruction==S_READ|instruction==S_B_READ)
+                if (instruction==S_READ)
                 begin
                     read_en <= 1;
                 end
@@ -379,6 +379,7 @@ begin
                 state <= READ_WAIT;
                 m_b_tx_valid <=0;
                 burst_done <= 1;
+                read_en <= 1;
 
 
             end
