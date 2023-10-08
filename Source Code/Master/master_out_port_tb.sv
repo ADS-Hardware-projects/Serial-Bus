@@ -37,6 +37,7 @@ module master_out_port_tb(
     logic [SLAVE_NO-1:0] slave_id;
     logic bus_grant;
     logic split_en;
+    logic rx_done=0;
 
 
     
@@ -76,6 +77,9 @@ module master_out_port_tb(
     @(posedge clk) #1 s_ready=3'b001;instruction = 3'b001; burst_size=1;m_data = 8'b10101001; s_addr = 12'b101; slave_id = 3'b000;bus_grant=1;split_en=0;
     @(posedge clk) #1 s_ready=3'b001;instruction = 3'b001; burst_size=1;m_data = 8'b10101001; s_addr = 12'b100100000111; slave_id = 3'b000;bus_grant=1;split_en=0;
     repeat(12) @(posedge clk);
+    repeat(10) @(posedge clk);
+    @(posedge clk) #1 rx_done=1;
+    @(posedge clk) #1 rx_done=0;
     @(posedge clk) #1 rst_n=0;
     @(posedge clk) #1 rst_n=1;
     // @(posedge clk) #1 s_ready=3'b001;instruction = 3'b001; burst_size=1;m_data = 8'b10101001; s_addr = 12'b101; slave_id = 3'b000;bus_grant=1;split_en=0;
@@ -108,6 +112,13 @@ module master_out_port_tb(
     repeat(1) @(posedge clk) #1 rst_n = 0;
     repeat(1) @(posedge clk) #1 rst_n = 1;
     @(posedge clk) #1 s_ready=3'b001;instruction = 3'b011; burst_size=12'b000001000101;m_data = 8'b10101001; s_addr = 12'b100100000111; slave_id = 3'b000;bus_grant=1;split_en=0;
+    repeat(15) @(posedge clk);
+    repeat(14) @(posedge clk);
+    repeat(26) @(posedge clk);
+    @(posedge clk) #1 rx_done=1;
+    @(posedge clk) #1 rx_done=0;
+    @(posedge clk) #1 rst_n=0;
+    @(posedge clk) #1 rst_n=1;
 
 
 

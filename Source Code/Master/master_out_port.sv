@@ -17,6 +17,7 @@ module master_out_port#(parameter SLAVE_NO = 5, parameter SLAVE_ADDR_SIZE = 12, 
     input logic [WORD_SIZE-1:0] m_data,
     input logic [SLAVE_ADDR_SIZE-1:0] s_addr,
     input logic [SLAVE_NO-1:0] slave_id,
+    input logic rx_done,
 
     //busses
 
@@ -54,7 +55,7 @@ module master_out_port#(parameter SLAVE_NO = 5, parameter SLAVE_ADDR_SIZE = 12, 
 
 logic [3:0] state;
 
-parameter IDLE = 1, BUS_REQ=2, BUS_GRANTED = 3, SLAVE_READ = 4, SLAVE_B_READ=5, SLAVE_WRITE=6,SLAVE_B_WRITE=7, ADDR_TX=8, DATA_TX=9, SPLIT=10, BURST_TX=11;
+parameter IDLE = 1, BUS_REQ=2, BUS_GRANTED = 3, SLAVE_READ = 4, SLAVE_B_READ=5, SLAVE_WRITE=6,SLAVE_B_WRITE=7, ADDR_TX=8, DATA_TX=9, SPLIT=10, BURST_TX=11, READ_WAIT=12;
 parameter S_READ = 1, S_WRITE = 2, S_B_READ = 3, S_B_WRITE = 4;
 
 integer addr_count;
@@ -115,8 +116,8 @@ begin
             slave_select <=0;
             tx_done <= 0;
             addr_done <= 0;
-            // write_en <= 0;
-            // read_en <= 0;
+            write_en <= 0;
+            read_en <= 0;
             m_valid <= 0;
             bus_util <=0;
             split_on <= 0;
@@ -317,7 +318,7 @@ begin
                     if (read_en ==1)
                     begin
                         
-                        state <= IDLE;
+                        state <= READ_WAIT;
                     end
                     else
                     begin
@@ -347,13 +348,26 @@ begin
             end
             end
             else
-            begin
+                begin
                 state <= ADDR_TX;
             end            
 
         end
 ///////////////////////////////////////////////////////////////////////////////////
+        READ_WAIT:
+        begin
 
+            if (rx_done ==1)
+            begin
+                state <= IDLE;
+            end
+
+            else
+            begin
+                state <= READ_WAIT;
+            end
+
+        end
 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -362,7 +376,7 @@ begin
             if (burst_count>= BURST_SIZE-1)
             begin
                 burst_size_bus <= burst_size[burst_count];
-                state <= IDLE;
+                state <= READ_WAIT;
                 m_b_tx_valid <=0;
                 burst_done <= 1;
 
