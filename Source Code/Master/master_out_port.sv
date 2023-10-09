@@ -261,7 +261,7 @@ begin
 
             else
             begin
-                state <= S_WRITE;
+                state <= SLAVE_B_WRITE;
             end   
 
             if (split_en)
@@ -308,6 +308,7 @@ begin
                     begin
 
                         state <= READ_WAIT;
+                        read_en <= 1;
                         
                     end
 
@@ -348,10 +349,11 @@ begin
                     addr_bus <= s_addr[addr_count];
                     state <= ADDR_TX;
                 end
-                end
+            end
             else
-                begin
+            begin
                 state <= ADDR_TX;
+                // addr_count <= addr_count -1;
             end            
 
         end
@@ -367,7 +369,7 @@ begin
 
             else
             begin
-                read_en <= 1;
+                // read_en <= 1;
                 state <= READ_WAIT;
             end
 
@@ -384,7 +386,7 @@ begin
                 state <= READ_WAIT;
                 m_b_tx_valid <=0;
                 burst_done <= 1;
-                // read_en <= 1;
+                read_en <= 1;
 
 
             end

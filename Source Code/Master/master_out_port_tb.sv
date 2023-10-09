@@ -96,19 +96,28 @@ module master_out_port_tb(
     @(posedge clk) #1 s_ready=3'b001;instruction = 3'b010; burst_size=1;m_data = 8'b10101001; s_addr = 12'b1010110101; slave_id = 3'b000;bus_grant=1;split_en=0;
     @(posedge clk) #1 s_ready=3'b001;instruction = 3'b010; burst_size=1;m_data = 8'b10101001; s_addr = 12'b1010110101; slave_id = 3'b000;bus_grant=1;split_en=0;
     @(posedge clk) #1 s_ready=3'b001;instruction = 3'b010; burst_size=1;m_data = 8'b10101001; s_addr = 12'b1010110101; slave_id = 3'b000;bus_grant=1;split_en=0;
-    @(posedge clk) #1 s_ready=3'b001;instruction = 3'b010; burst_size=1;m_data = 8'b10101001; s_addr = 12'b1111110101; slave_id = 3'b000;bus_grant=1;split_en=0;
+    @(posedge clk) #1 s_ready=3'b000;instruction = 3'b010; burst_size=1;m_data = 8'b10101001; s_addr = 12'b1111110101; slave_id = 3'b000;bus_grant=1;split_en=0;
+    repeat(150) @(posedge clk);
+    @(posedge clk) #1 s_ready=3'b001;
     repeat(15) @(posedge clk);
 
 
     @(posedge clk) #1 s_ready=3'b001;instruction = 3'b100; burst_size=1;m_data = 8'b10101001; s_addr = 12'b101; slave_id = 3'b000;bus_grant=1;split_en=0;
     repeat(3) @(posedge clk);
-    @(posedge clk) #1 s_ready=3'b001;instruction = 3'b100; burst_size=3;m_data = 8'b10101001; s_addr = 12'b1001110101; slave_id = 3'b000;bus_grant=1;split_en=0;
+    @(posedge clk) #1 s_ready=3'b001;instruction = 3'b100; burst_size=4;m_data = 8'b10101001; s_addr = 12'b1001110101; slave_id = 3'b000;bus_grant=1;split_en=0;
     repeat(23) @(posedge clk);
 
     @(posedge clk) #1 m_data = 8'b10111001;
-    repeat(8) @(posedge clk);
-    @(posedge clk) #1 m_data = 8'b10101111;
-    repeat(8) @(posedge clk);
+    repeat(2) @(posedge clk);
+    @(posedge clk); #1 s_ready = 3'b000;
+    repeat(150) @(posedge clk);
+    @(posedge clk) #1 s_ready=3'b001;
+    repeat(3) @(posedge clk);
+
+    @(posedge clk) #1 m_data = 8'b10111101;
+    repeat(7) @(posedge clk);
+    @(posedge clk) #1 m_data = 8'b11101111;
+    repeat(7) @(posedge clk);
     repeat(1) @(posedge clk) #1 rst_n = 0;
     repeat(1) @(posedge clk) #1 rst_n = 1;
     @(posedge clk) #1 s_ready=3'b001;instruction = 3'b011; burst_size=12'b000001000101;m_data = 8'b10101001; s_addr = 12'b100100000111; slave_id = 3'b000;bus_grant=1;split_en=0;
