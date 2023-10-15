@@ -7,24 +7,26 @@ module slave_in_port (
   output logic [11:0]address = 12'b0,
   output logic [7:0]data=8'b0,
   output logic [11:0]burst_counter =12'd0,
-  output logic [7:0]address_counter = 4'd0,
-  output logic [3:0]data_counter = 4'd0 
+  output logic [7:0]address_counter = 4'd0
 );  
 
 
-logic [3:0]address_state = 1;
-logic [3:0]data_state = 1;
+logic [3:0]address_state = 4'd4;
+logic [3:0]data_state = 4'd1;
 
  
-  logic data_idle = 1;
+  logic data_ADDR_idle = 1;
   logic address_idle = 1;
-  
+  logic data_counter = 4'd0;
 
 
   logic hadshake ;
 
+  
+  
+ 
   assign handshake = s_ready && m_valid;
-  assign s_ready =  data_idle && address_idle;
+  assign s_ready =  data_ADDR_idle && address_idle;
   assign read_en_in = rx_done && read_en_in1 ;
   assign write_en_in = rx_done && write_en_in1;
 
@@ -33,16 +35,16 @@ logic [3:0]data_state = 1;
 
   // State Machine
 
-// enum logic {DATA_IDLE  , DATA_RX , DATA_BURST_GAP   } data_state;
-// enum logic {ADDR_IDLE  , ADDR_RX  , ADDR_INC_BURST , ADDR_HS_WAIT , READ_BURST_HS_WAIT } address_state;
+// enum logic {DATA_ADDR_IDLE  , DATA_RX , DATA_BURST_GAP   } data_state;
+enum logic {ADDR_ADDR_IDLE  , ADDR_RX  , ADDR_INC_BURST , ADDR_HS_WAIT , READ_BURST_HS_WAIT } address_state;
  
- localparam IDLE = 1  , DATA_RX =2, DATA_BURST_GAP =3,
-                   ADDR_RX =5 , ADDR_INC_BURST=6 , ADDR_HS_WAIT=7 , READ_BURST_HS_WAIT =8;
+
+             
 
   always_ff @(posedge clk or negedge rstn) begin
 
     if (!rstn) begin
-      address_state  <= IDLE;
+      address_state  <= ADDR_IDLE;
       address_counter <= 4'd0;
       address_idle <= 1;
       read_en_in1 <= 0;
@@ -53,7 +55,7 @@ logic [3:0]data_state = 1;
     else
     begin
       case (address_state)
-            IDLE :  begin
+            ADDR_IDLE :  begin
             if (handshake == 1'd1)
             begin
                 address_state <= ADDR_RX;
@@ -69,7 +71,7 @@ logic [3:0]data_state = 1;
             end
             else 
             begin
-                address_state <= IDLE;
+                address_state <= ADDR_IDLE;
                 address_counter <= 4'd0;
                 address_idle <= 1;
                 rx_done <= 0;
@@ -100,7 +102,7 @@ logic [3:0]data_state = 1;
                 else if ((burst[0]==1) && handshake ==0)
                 address_state <= ADDR_HS_WAIT;
                 else begin
-                address_state <= IDLE;
+                address_state <= ADDR_IDLE;
                 address_counter <= 0;
                 address[address_counter] <= rx_address;
                 address_idle <= 1;
@@ -183,7 +185,7 @@ logic [3:0]data_state = 1;
 
                end
                else begin
-                address_state <= IDLE;
+                address_state <= ADDR_IDLE;
                 address_counter <= 0;
                 address_idle <= 1;
                 burst_counter <= burst_counter +1 ;
@@ -201,7 +203,7 @@ logic [3:0]data_state = 1;
 
          default: 
                    begin
-                       address_state <= IDLE;
+                       address_state <= ADDR_IDLE;
                        address_counter <= 4'd0;
                        address_idle <= 1;
 
@@ -212,86 +214,5 @@ logic [3:0]data_state = 1;
   end
 
 
-always_ff @ (posedge clk or negedge rstn)
-begin
-    if (!rstn) begin
-    data_state <= IDLE;
-    data_counter <= 0;
-    data_idle <= 1;
-end
-else
-begin 
-    case(data_state)
-    IDLE: 
-    begin
-        if (handshake == 1'd1 && (write_enable || write_en_in1))
-        begin
-            data_state <= DATA_RX;
-            data_counter <= data_counter + 4'd1;
-            data[data_counter] <= rx_data;
-            data_idle <= 0;
-
-        end
-        else
-        begin
-            data_state <= data_state;
-            data_counter <= 0;
-            data_idle <= 1;
-        end
-    end
-
-    DATA_RX:
-    begin
-        if (data_counter < 4'd7 && write_en_in1 ==1)
-        begin
-            data_state <= data_state;
-            data_counter <= data_counter +1'd1;
-            data[data_counter] <= rx_data;
-            data_idle <= 0;
-        end
-
-        else begin
-            if (burst_counter == 0 && write_en_in1 == 1)
-                data_state <= DATA_BURST_GAP;
-            else
-            begin
-                data_state <= IDLE;
-                data_idle <= 1;
-
-            end
-            data_counter <= 0;
-            data[data_counter] <= rx_data;
-
-        end
-    end
-
-    DATA_BURST_GAP:
-    begin
-        if (data_counter < 3)
-        begin
-            data_state <= DATA_BURST_GAP;
-            data_counter <= data_counter +1;
-            data_idle <= 0;
-        end
-        else 
-        begin
-            data_state <= IDLE;
-            data_counter <= 0;
-            data_idle <= 1; 
-        
-        end
-
-    end
-
-    default :
-    begin
-        data_state <= IDLE;
-    end
-
-
-endcase
-end
-
-end
 
 endmodule
