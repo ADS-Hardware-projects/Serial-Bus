@@ -7,8 +7,8 @@ module slave_in_port (
   output logic [11:0]address = 12'b0,
   output logic [7:0]data=8'b0,
   output logic [11:0]burst_counter =12'd0,
-  output logic [7:0]address_counter = 4'd0,
-  output logic [3:0]data_counter = 4'd0 
+  output logic [7:0]address_counter = 4'd0
+  
 );  
 
 
@@ -18,7 +18,7 @@ logic [3:0]data_state = 1;
  
   logic data_idle = 1;
   logic address_idle = 1;
-  
+  logic [3:0]data_counter = 4'd0 ;
 
 
   logic hadshake ;
