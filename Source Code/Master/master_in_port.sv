@@ -151,6 +151,7 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
                     temp_data[bit_count] <= rx_data;
                     bit_count <= bit_count + 1;
                     state <= RECIEVE;
+                    new_data <= 0;
 
                 end
 

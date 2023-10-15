@@ -123,7 +123,7 @@ module master_port_tb(
     @(posedge clk) #1 m_data = 8'b10111101;
     repeat(7) @(posedge clk);
     @(posedge clk) #1 m_data = 8'b11101111;
-    repeat(7) @(posedge clk);
+    repeat(8) @(posedge clk);
     repeat(1) @(posedge clk) #1 rst_n = 0;
     repeat(1) @(posedge clk) #1 rst_n = 1;
     @(posedge clk) #1 s_ready=3'b001;instruction = 3'b011; burst_size=12'b000001000101;m_data = 8'b10101001; s_addr = 12'b100100000111; slave_id = 3'b000;bus_grant=1;split_en=0;
