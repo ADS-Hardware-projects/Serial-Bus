@@ -1,3 +1,23 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: Saliya Dinusha
+// 
+// Create Date: 10/06/2023 03:36:17 PM
+// Design Name: 
+// Module Name: master_in_port_tb
+// Project Name: SystemBus
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: NO
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
 
     //global inputs
@@ -57,7 +77,7 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
 
             IDLE:
             begin
-                if (instruction==2'b11)
+                if (instruction==3'b001)
                 begin
                     state <= READ;
                     bit_count <=0;
@@ -103,6 +123,8 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
                     temp_data[bit_count] <= rx_data;
                     s_data[WORD_SIZE-1:0] <= temp_data[WORD_SIZE-1:0];
                     m_ready <= 1;
+                    s_data[bit_count] <= rx_data;
+                    s_data[WORD_SIZE-2:0]<= temp_data[WORD_SIZE-2:0];
 
                     if (word_count>= burst_size-1)
                     begin
