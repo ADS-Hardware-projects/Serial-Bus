@@ -77,12 +77,12 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
 
             IDLE:
             begin
-                if (instruction==3'b001)
+                if (instruction==3'b001 |instruction==3'b011 )
                 begin
                     state <= READ;
                     bit_count <=0;
                     word_count<=0;
-                    m_ready <=1;
+                    // m_ready <=1;
                     new_data <=0;
                     rx_done <=0;
 
@@ -92,6 +92,7 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
                     state <= IDLE;
                     new_data <=0;
                     rx_done <= 0;
+                    m_ready <= 1;
                 end
             end
 
@@ -121,7 +122,7 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
                     bit_count <= 0;
                     new_data <= 1;
                     temp_data[bit_count] <= rx_data;
-                    s_data[WORD_SIZE-1:0] <= temp_data[WORD_SIZE-1:0];
+                    
                     m_ready <= 1;
                     s_data[bit_count] <= rx_data;
                     s_data[WORD_SIZE-2:0]<= temp_data[WORD_SIZE-2:0];
@@ -137,8 +138,9 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
                     else
                     begin
                         word_count <= word_count+1;
-                        state <= READ;
-                        m_ready <= 1;
+                        state <= RECIEVE;
+                        m_ready <= 0;
+                        rx_done <= 0;
                         
                     end
 

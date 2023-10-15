@@ -24,6 +24,7 @@ module master_out_port#(parameter SLAVE_NO = 5, parameter SLAVE_ADDR_SIZE = 12, 
     output logic addr_bus,
     output logic w_data_bus,
     output logic burst_size_bus,
+    output logic m_ready,
 
 
     
@@ -87,6 +88,7 @@ begin
         addr_bus<=0;
         burst_size_bus<=0;
         new_data<=0;
+        m_ready <= 0;
 
 
     end
@@ -128,6 +130,7 @@ begin
             burst_size_bus<=0;
             m_b_tx_valid <= 0;
             new_data <=0;
+            m_ready <= 0;
 
 
 
@@ -361,6 +364,7 @@ begin
         READ_WAIT:
         begin
             addr_bus <= 0;
+            m_ready <= 1;
 
             if (rx_done ==1)
             begin
