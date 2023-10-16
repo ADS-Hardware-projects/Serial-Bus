@@ -130,7 +130,13 @@ module master_port_tb(
     repeat(15) @(posedge clk);
     repeat(13) @(posedge clk);
     @(posedge clk); s_valid = 1; rx_data = 0;
-    repeat(200) @(posedge clk); #1 rx_data = 1;
+    for(int i=0; i<200; i++)
+    begin
+         @(posedge clk); #1 rx_data = $urandom_range(0,1);
+    end
+
+    
+    // repeat(200) @(posedge clk); #1 rx_data = 1;
     repeat(7) @(posedge clk); #1 rx_data = 0;
     repeat(2) @(posedge clk); #1 rx_data = 1;
     repeat(3) @(posedge clk); #1 rx_data = 0;

@@ -64,7 +64,7 @@ integer data_count;
 integer word_count;
 integer burst_count;
 
-always @(posedge clk or negedge rst_n)
+always @(posedge clk)
 begin
 
     if (!rst_n)
@@ -154,37 +154,56 @@ begin
 ////////////////////////////////////////////////
         BUS_GRANTED:
         begin
-
-            if (instruction == S_READ)
+            case (instruction)
+            S_READ:
             begin
-
                 state <= SLAVE_READ;
-                
-
             end
-
-            else if (instruction == S_WRITE)
+            S_WRITE:
             begin
-
                 state <= SLAVE_WRITE;
-                
             end
-
-
-            else if (instruction == S_B_READ)
+            S_B_READ:
             begin
-
                 state <= SLAVE_B_READ;
-                
+            end
+            S_B_WRITE:
+            begin
+                state <= SLAVE_B_WRITE;
             end
 
-            else if (instruction == S_B_WRITE)
-            begin
+            endcase
 
-                state <= SLAVE_B_WRITE;
+            // if (instruction == S_READ)
+            // begin
+
+            //     state <= SLAVE_READ;
                 
 
-            end           
+            // end
+
+            // else if (instruction == S_WRITE)
+            // begin
+
+            //     state <= SLAVE_WRITE;
+                
+            // end
+
+
+            // else if (instruction == S_B_READ)
+            // begin
+
+            //     state <= SLAVE_B_READ;
+                
+            // end
+
+            // else if (instruction == S_B_WRITE)
+            // begin
+
+            //     state <= SLAVE_B_WRITE;
+                
+
+            // end           
              
         end
 /////////////////////////////////////////////////////////////////////
@@ -230,22 +249,26 @@ begin
         SLAVE_B_READ:
         begin
 
-            if (s_ready[slave_id]==1)
-            begin
 
-                state <= ADDR_TX;
-                slave_select[slave_id] <= 1;
-                
-            end
-
-            else
-            begin
-                state <= SLAVE_B_READ;
-            end
 
             if (split_en)
             begin
                 state <= SPLIT;
+            end
+            else
+            begin
+                if (s_ready[slave_id]==1)
+                begin
+
+                    state <= ADDR_TX;
+                    slave_select[slave_id] <= 1;
+                    
+                end
+
+                else
+                begin
+                    state <= SLAVE_B_READ;
+                end
             end
 
 
@@ -255,21 +278,26 @@ begin
         SLAVE_B_WRITE:
         begin
 
-            if (s_ready[slave_id]==1)
-            begin
-
-                state <= ADDR_TX;
-                slave_select[slave_id] <= 1;
-            end    
-
-            else
-            begin
-                state <= SLAVE_B_WRITE;
-            end   
-
             if (split_en)
             begin
                 state <= SPLIT;
+            end
+
+            else
+            begin
+
+                if (s_ready[slave_id]==1)
+                begin
+
+                    state <= ADDR_TX;
+                    slave_select[slave_id] <= 1;
+                end    
+
+                else
+                begin
+                    state <= SLAVE_B_WRITE;
+                end
+
             end
 
         end
@@ -287,37 +315,52 @@ begin
 
                     addr_bus <= s_addr[addr_count];
                     addr_done <= 1;
-                    // if (instruction==S_READ)
-                    // begin
-                    //     read_en <= 1;
-                    // end
-                    // else
-                    // begin
-                    //     read_en <= 0;
-                    // end
-                    
-                    // addr_count <= addr_count + 1;
 
-                    if (instruction==S_B_READ)
+                    case (instruction)
+                    S_B_READ:
                     begin
-                        
                         state <= BURST_TX;
                         m_b_tx_valid <= 1;
-                        
-
                     end
 
-                    else if (instruction==S_READ)
+                    S_READ:
                     begin
-
                         state <= READ_WAIT;
                         read_en <= 1;
-                        
                     end
 
-                    else if (instruction==S_B_WRITE|instruction==S_WRITE)
+                    S_B_WRITE:
                     begin
                         state <= DATA_TX;
+                    end
+
+                    S_WRITE:
+                    begin
+                        state <= DATA_TX;
+                    end
+
+                    endcase
+
+                    // if (instruction==S_B_READ)
+                    // begin
+                        
+                    //     state <= BURST_TX;
+                    //     m_b_tx_valid <= 1;
+                        
+
+                    // end
+
+                    // else if (instruction==S_READ)
+                    // begin
+
+                    //     state <= READ_WAIT;
+                    //     read_en <= 1;
+                        
+                    // end
+
+                    // else if (instruction==S_B_WRITE|instruction==S_WRITE)
+                    // begin
+                    //     state <= DATA_TX;
 
                         // addr_bus <=0;
 
@@ -339,13 +382,8 @@ begin
                         // begin
                         //     read_en <= 0;
                         // end                    
-                    end
-            
-
-
-
                 end
-
+            
                 else 
                 begin
                     addr_count <= addr_count +1;

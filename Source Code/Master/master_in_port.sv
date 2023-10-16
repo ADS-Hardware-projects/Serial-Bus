@@ -58,7 +58,7 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
     integer bit_count =0;
     integer word_count = 0;
 
-    always @ (posedge clk or negedge rst_n) 
+    always @ (posedge clk) 
     begin
 
         if (!rst_n)
