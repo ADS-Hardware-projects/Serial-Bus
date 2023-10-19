@@ -1,0 +1,18 @@
+module uart_master_bridge (
+  input logic i_Clock,
+  input logic i_Rx_DV,        // Data valid from uart_rx
+  input logic [7:0] i_Rx_Byte, // Received byte from uart_rx
+  output logic [7:0] i_m_data,  // Data from master core
+  output logic o_m_valid      // Data valid signal to master core
+);
+
+  assign o_m_valid = i_Rx_DV;  // Pass through data valid from uart_rx
+
+  always @(posedge i_Clock) begin
+    // Route received byte from uart_rx to master core
+    if (i_Rx_DV) begin
+      i_m_data <= i_Rx_Byte;
+    end
+  end
+
+endmodule

@@ -1,0 +1,26 @@
+module uart_bridge (
+  input logic i_Clock,
+  input logic i_Rx_DV,        // Data valid from uart_rx
+  input logic [7:0] data_Byte, // Received byte from uart_rx or slave
+  input logic i_Tx_DV,
+  output logic [7:0] i_m_data,  // Data from master core or uart tx
+  output logic o_m_valid,      // Data valid signal to master core
+  output logic i_m_valid
+);
+
+  assign o_m_valid = i_Rx_DV;  // Pass through data valid from uart_rx
+  assign i_m_valid = i_Tx_DV;
+
+  always @(posedge i_Clock) begin
+    // Route received byte from uart_rx to master core of bridge module
+    if (i_Rx_DV) begin
+      i_m_data <= data_Byte;
+    end
+	 if (i_Tx_DV) begin
+      i_m_data <= data_Byte;
+    end
+	 
+	 
+  end
+
+endmodule
