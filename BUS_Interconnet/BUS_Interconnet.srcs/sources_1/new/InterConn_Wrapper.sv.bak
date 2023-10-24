@@ -48,7 +48,7 @@ module InterConn_Wrapper(
     output logic S1_RX_ADDR,
     output logic S1_RX_DATA,
     output logic S1_WRITE_EN,
-    output logic S1_READ_EN,    //need a slave ready?
+    output logic S1_READ_EN,
 
 
     // PINS for Slave 2
@@ -59,7 +59,7 @@ module InterConn_Wrapper(
     output logic S2_RX_ADDR,
     output logic S2_RX_DATA,
     output logic S2_WRITE_EN,
-    output logic S2_READ_EN,    //need a slave ready?
+    output logic S2_READ_EN,
 
 
     // PINS for Slave 3
@@ -70,7 +70,7 @@ module InterConn_Wrapper(
     output logic S3_RX_ADDR,
     output logic S3_RX_DATA,
     output logic S3_WRITE_EN,
-    output logic S3_READ_EN     //need a slave ready?
+    output logic S3_READ_EN
 );
 
 // these are logic wires to interconnect arbitter and the multiplexer
