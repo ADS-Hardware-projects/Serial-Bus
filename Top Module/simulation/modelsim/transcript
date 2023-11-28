@@ -1,0 +1,17 @@
+# Compile of Top_tb.sv was successful.
+# Compile of BRAM.sv was successful.
+# Compile of InterConn_Arbitter.sv was successful.
+# Compile of InterConn_Multiplexer.sv was successful.
+# Compile of InterConn_Wrapper.sv failed with 1 errors.
+# Compile of master_in_port.sv was successful.
+# Compile of master_out_port.sv was successful.
+# Compile of master_out_port_TB.sv failed with 5 errors.
+# Compile of master_port.sv was successful.
+# Compile of slave_in_port.sv was successful.
+# Compile of slave_out_port.sv was successful.
+# Compile of slave_port.sv was successful.
+# Compile of slave_wrapper.sv was successful.
+# Compile of SystemBus.sv failed with 29 errors.
+# Compile of Top.sv was successful.
+# 15 compiles, 3 failed with 35 errors. 
+vsim -do SystemBus_run_msim_rtl_verilog.do -l msim_transcript -gui work.Top_tb

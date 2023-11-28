@@ -1,58 +1,56 @@
 module master_port#(parameter SLAVE_NO = 5, parameter SLAVE_ADDR_SIZE = 12, parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
 
-    //global inputs
+    //GLOBAL INPUTS
     input logic clk,
     input logic rst_n,
 
-    //inputs from bus side/slave side
-    input logic [SLAVE_NO-1:0] s_ready,
+    //INPUTS FROM BUS/SLAVE SIDE
+    input logic s_ready,
     input logic s_valid,
 
 
-
-
-    //inputs from master core side
-
-    input logic [2:0] instruction,
-    input logic [BURST_SIZE-1:0] burst_size,
+	//SINGALS FROM MASTER CORE SIDE
+    input logic [2:0] instruction,      //check instruction size
+    input logic [BURST_SIZE-1:0] burst_size,  
     input logic [WORD_SIZE-1:0] m_data,
+	 input logic [SLAVE_NO-1:0] slave_select,
     input logic [SLAVE_ADDR_SIZE-1:0] s_addr,
     input logic [SLAVE_NO-1:0] slave_id,
     output logic [WORD_SIZE-1:0] s_data,
     
 
-    //busses
-
-    input logic rx_data,
+    //BUSSES
+	 input logic rx_data,
     output logic addr_bus,
     output logic w_data_bus,
     output logic burst_size_bus,
 
     ////
     output logic m_ready,
-
-
     
-    //outputs to bus side
+    //OUTPUTS TO BUS SIDE
     output logic read_en,
     output logic write_en,
     output logic m_valid,
-    output logic [SLAVE_NO-1:0] slave_select,
     output logic addr_done,
     output logic tx_done,
-    output logic split_on,
+    //output logic split_on,
     output logic burst_done,
     output logic m_b_tx_valid,
     output logic new_data_in,
     output logic new_data_out,
     output logic rx_done,
 
-    //outputs to arbiter
-
+	 
+    //SIGNALS INTERACTING WITH THE ARBITER
+	 input logic arb_busy,
+	 input logic bus_busy,
+	 output logic arb_trans_done,
+	 output logic ar_slave_select, 
     output logic bus_req,
     input logic bus_grant,
     output logic bus_util,
-    input logic split_en
+    //input logic split_en
 
 
 

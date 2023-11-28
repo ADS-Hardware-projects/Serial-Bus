@@ -29,6 +29,7 @@ module InterConn_Multiplexer(
 
     // PINS for Slave 1
     input logic S1_DATA_TX,
+	 input logic S1_SLAVE_READY,
     output logic S1_CLK,
     output logic S1_RST,
     output logic S1_VALID,
@@ -40,6 +41,7 @@ module InterConn_Multiplexer(
 
     // PINS for Slave 2
     input logic S2_DATA_TX,
+	 input logic S2_SLAVE_READY,
     output logic S2_CLK,
     output logic S2_RST,
     output logic S2_VALID,
@@ -51,6 +53,7 @@ module InterConn_Multiplexer(
 
     // PINS for Slave 3
     input logic S3_DATA_TX,
+	 input logic S3_SLAVE_READY,
     output logic S3_CLK,
     output logic S3_RST,
     output logic S3_VALID,
@@ -67,7 +70,7 @@ always_comb begin : Master1_Multiplexer
     {2'b01, 2'b01}: begin // selecting slave 1
         // setting the Master Outputs
         M1_RX_DATA = S1_DATA_TX;
-        M1_SLAVE_READY = 1'b1;
+        M1_SLAVE_READY = S1_SLAVE_READY;//M1_SLAVE_READY = 1'b1;
 
         // setting the Master Inputs  and slave outputs
         S1_CLK = M1_CLK;
@@ -81,7 +84,7 @@ always_comb begin : Master1_Multiplexer
     {2'b01, 2'b10}: begin // selecting slave 2
         // setting the Master Outputs
         M1_RX_DATA = S2_DATA_TX;
-        M1_SLAVE_READY = 1'b1;
+        M1_SLAVE_READY = S2_SLAVE_READY; //M1_SLAVE_READY = 1'b1;
 
         // setting the Master Inputs  and slave outputs
         S2_CLK = M1_CLK;
@@ -95,9 +98,9 @@ always_comb begin : Master1_Multiplexer
     {2'b01, 2'b11}: begin // selecting slave 3
         // setting the Master Outputs
         M1_RX_DATA = S3_DATA_TX;
-        M1_SLAVE_READY = 1'b1;
+        M1_SLAVE_READY = S3_SLAVE_READY; //M1_SLAVE_READY = 1'b1;
 
-        // setting the Master Inputs  and slave outputs
+        // setting the Master Inputs  a nd slave outputs
         S3_CLK = M1_CLK;
         S3_RST = M1_RST;
         S3_VALID = M1_VALID;
@@ -111,7 +114,7 @@ always_comb begin : Master1_Multiplexer
 
     {2'b10, 2'b01}: begin // selecting slave 1
         M2_RX_DATA = S1_DATA_TX;
-        M2_SLAVE_READY = 1'b1;
+        M2_SLAVE_READY = S1_SLAVE_READY; //M2_SLAVE_READY = 1'b1;
 
         // setting the Master Inputs  and slave outputs
         S1_CLK = M2_CLK;
@@ -124,7 +127,7 @@ always_comb begin : Master1_Multiplexer
     end
     {2'b10, 2'b10}: begin // selecting slave 2
         M2_RX_DATA = S2_DATA_TX;
-        M2_SLAVE_READY = 1'b1;
+        M2_SLAVE_READY = S2_SLAVE_READY;  //M2_SLAVE_READY = 1'b1;
 
         // setting the Master Inputs  and slave outputs
         S2_CLK = M2_CLK;
@@ -137,7 +140,7 @@ always_comb begin : Master1_Multiplexer
     end
     {2'b10, 2'b11}: begin // selecting slave 3
         M2_RX_DATA = S3_DATA_TX;
-        M2_SLAVE_READY = 1'b1;
+        M2_SLAVE_READY = S3_SLAVE_READY; //M2_SLAVE_READY = 1'b1;
 
         // setting the Master Inputs  and slave outputs
         S3_CLK = M2_CLK;

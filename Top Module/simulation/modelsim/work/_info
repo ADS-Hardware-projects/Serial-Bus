@@ -1,0 +1,274 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\ACADEMICS\Sem7\ADS\System Bus design\Serial-Bus\Top Module\simulation\modelsim
+vBRAM
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 I2mDB71_6`3:9>Hh8z:?j]2
+Z3 VWWazLj[Vnb;6[VdR=Clab2
+S1
+Z4 dD:\ACADEMICS\Sem7\ADS\System Bus design\Serial-Bus\Top Module\simulation\modelsim
+Z5 w1697709565
+Z6 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/BRAM.sv
+Z7 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/BRAM.sv
+L0 5
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 o-work work -sv -O0
+Z10 n@b@r@a@m
+Z11 !s100 ad];CMO<dLY[ZT:APX^1a1
+Z12 !s105 BRAM_sv_unit
+Z13 !s108 1700711004.891000
+Z14 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/BRAM.sv|
+Z15 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/BRAM.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vInterConn_Arbitter
+R1
+Z16 I7mSCFD88IkaRQHh48Q>g42
+Z17 V;[=;BkXnFBQinRYATJQHE3
+S1
+R4
+Z18 w1698780569
+Z19 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Arbitter.sv
+Z20 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Arbitter.sv
+L0 1
+R8
+r1
+31
+R9
+Z21 n@inter@conn_@arbitter
+Z22 !s100 NNf9JSJlnSG^UAjG<k<cY1
+Z23 !s105 InterConn_Arbitter_sv_unit
+Z24 !s108 1700711004.951000
+Z25 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Arbitter.sv|
+Z26 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Arbitter.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vInterConn_Multiplexer
+R1
+Z27 IKb9A9hoz?N9cL]ef<^j1B1
+Z28 V5Hc2:d^63PN_n?JN49k872
+S1
+R4
+Z29 w1698780723
+Z30 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Multiplexer.sv
+Z31 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Multiplexer.sv
+L0 1
+R8
+r1
+31
+R9
+Z32 n@inter@conn_@multiplexer
+Z33 !s100 A@ckO::9=0So=W4KEoIA]0
+Z34 !s105 InterConn_Multiplexer_sv_unit
+Z35 !s108 1700711005.001000
+Z36 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Multiplexer.sv|
+Z37 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Multiplexer.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vmaster_in_port
+R1
+Z38 I@>o=hZFNYaVW7L`WCVYi:1
+Z39 VXKVR:RP<S@BbYiQK=`ll?0
+S1
+R4
+Z40 w1698491509
+Z41 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_in_port.sv
+Z42 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_in_port.sv
+L0 6
+R8
+r1
+31
+R9
+Z43 !s100 8QVagej>zH^;OLgAkV_?52
+Z44 !s105 master_in_port_sv_unit
+Z45 !s108 1700711005.101000
+Z46 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_in_port.sv|
+Z47 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_in_port.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vmaster_out_port
+R1
+Z48 ID8kIjWT>MXH;z8;eT83Df2
+Z49 VP3O8@m]m<FZPjgKI[gHlo3
+S1
+R4
+Z50 w1698491373
+Z51 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port.sv
+Z52 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port.sv
+L0 2
+R8
+r1
+31
+R9
+Z53 !s100 beGaYDkPXiF]F=nODoJk30
+Z54 !s105 master_out_port_sv_unit
+Z55 !s108 1700711005.153000
+Z56 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port.sv|
+Z57 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vmaster_port
+R1
+Z58 IfA6^O:@9RckU7=5`0VK;o2
+Z59 V[YlzY11FDa89UCT:Oi5UO0
+S1
+R4
+Z60 w1698491077
+Z61 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_port.sv
+Z62 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_port.sv
+L0 5
+R8
+r1
+31
+R9
+Z63 !s100 k>3D?oezb_HXOazIIaOnX2
+Z64 !s105 master_port_sv_unit
+Z65 !s108 1700711005.263000
+Z66 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_port.sv|
+Z67 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_port.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vslave_in_port
+R1
+Z68 ISEz4]TLLe]Z6za^gnKC1f2
+Z69 V:`XjCAf32d5FJPfNJWTTo3
+S1
+R4
+Z70 w1700632366
+Z71 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_in_port.sv
+Z72 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_in_port.sv
+L0 1
+R8
+r1
+31
+R9
+Z73 !s100 T6zQhd6ElK_9=WMk0KgzF0
+Z74 !s105 slave_in_port_sv_unit
+Z75 !s108 1700711005.313000
+Z76 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_in_port.sv|
+Z77 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_in_port.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vslave_out_port
+R1
+Z78 Ii_Ml5RLERaFF6nQR=i=`J2
+Z79 VKDd;o7oKYQG]BZC8=;K2V0
+S1
+R4
+Z80 w1700632339
+Z81 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_out_port.sv
+Z82 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_out_port.sv
+L0 1
+R8
+r1
+31
+R9
+Z83 !s100 ;Q<DJZPmL3iC`S;`i^4Cg0
+Z84 !s105 slave_out_port_sv_unit
+Z85 !s108 1700711005.363000
+Z86 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_out_port.sv|
+Z87 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_out_port.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vslave_port
+R1
+Z88 I7:k[]QG^iWWN<W1N^0[2h0
+Z89 VffkRBHfz=CIkOe4g57CAL1
+S1
+R4
+Z90 w1698507921
+Z91 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_port.sv
+Z92 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_port.sv
+L0 7
+R8
+r1
+31
+R9
+Z93 !s100 <R<cW_=cii9iB4CdDPQmG1
+Z94 !s105 slave_port_sv_unit
+Z95 !s108 1700711005.413000
+Z96 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_port.sv|
+Z97 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_port.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vslave_wrapper
+R1
+Z98 I6dW1UnKVz:SM`1IE>JjXi3
+Z99 VYf@;[oHnZC6eeooUn?73S2
+S1
+R4
+Z100 w1698928694
+Z101 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_wrapper.sv
+Z102 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_wrapper.sv
+L0 1
+R8
+r1
+31
+R9
+!i10b 1
+Z103 !s100 ]M]?eJ=Dkjl6ZSQF0XK7d0
+Z104 !s105 slave_wrapper_sv_unit
+!s85 0
+Z105 !s108 1700711005.463000
+Z106 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_wrapper.sv|
+Z107 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_wrapper.sv|
+!s101 -O0
+vTop
+R1
+!i10b 1
+!s100 >M]oTKfe]3NOKZUbhfSNl1
+I6ZM0E[^Vc33W0fB:7c@F20
+Vfek=IzH8KAL627cV0aM:63
+!s105 Top_sv_unit
+S1
+R4
+w1700634199
+8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top.sv
+FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top.sv
+L0 2
+R8
+r1
+!s85 0
+31
+!s108 1700711005.573000
+!s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top.sv|
+!s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top.sv|
+!s101 -O0
+R9
+n@top
+vTop_tb
+R1
+Z108 IJKA`;leLRe_HhVkITcgfa3
+Z109 V>ESGj[0fa@iCKo[2X5;m]0
+S1
+R4
+Z110 w1700710315
+Z111 8D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv
+Z112 FD:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv
+L0 3
+R8
+r1
+31
+R9
+Z113 n@top_tb
+Z114 !s100 8V[mind]M:_oS_zA8034]3
+Z115 !s105 Top_tb_sv_unit
+Z116 !s108 1700711004.841000
+Z117 !s107 D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv|
+Z118 !s90 -reportprogress|300|-work|work|-sv|D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv|
+!i10b 1
+!s85 0
+!s101 -O0

@@ -1,0 +1,29 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\ACADEMICS\Sem7\ADS\System Bus design\Serial-Bus\Top Module\simulation\modelsim
+vTop
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 HDL]kZ0fYeVfANDDh1K;e2
+IGm`FaoTNhjcIFl<B;@0g93
+VLcY<INH9P6oXlOflk5zYm2
+!s105 SystemBus_7_1200mv_100c_slow_svo_unit
+S1
+Z2 dD:\ACADEMICS\Sem7\ADS\System Bus design\Serial-Bus\Top Module\simulation\modelsim
+w1700724569
+8SystemBus_7_1200mv_100c_slow.svo
+FSystemBus_7_1200mv_100c_slow.svo
+L0 32
+Z3 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1700731199.975000
+!s107 SystemBus_7_1200mv_100c_slow.svo|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+.|SystemBus_7_1200mv_100c_slow.svo|
+!s101 -O0
+o-sv -work work -O0
+!s92 -sv -work work +incdir+. -O0
+n@top

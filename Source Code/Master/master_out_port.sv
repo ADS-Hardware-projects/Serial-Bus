@@ -2,10 +2,10 @@ module master_out_port#(parameter SLAVE_NO = 5, parameter SLAVE_ADDR_SIZE = 12, 
 
     //global inputs
     input logic clk,
-    input logic rst_n,
+    input logic rst,
 
     //inputs from bus side/slave side
-    input logic [SLAVE_NO-1:0] s_ready,
+    input logic s_ready,
 
 
 
@@ -64,10 +64,10 @@ integer data_count;
 integer word_count;
 integer burst_count;
 
-always @(posedge clk)
+always @(posedge clk or posedge rst)
 begin
 
-    if (!rst_n)
+    if (rst)
     begin
         read_en <= 0;
         write_en <= 0;

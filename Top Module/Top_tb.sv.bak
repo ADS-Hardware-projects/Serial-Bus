@@ -1,0 +1,96 @@
+`timescale 1ns/1ps
+
+module Top_tb;
+
+  // Parameters
+  localparam SLAVE_LEN = 2;
+  localparam ADDRESS_LEN = 12;
+  localparam WORD_SIZE = 8;
+  localparam BURST_SIZE = 12;
+  localparam MAX_COUNT_CLK = 4;
+
+  // Signals
+  logic clk;
+  logic rst;
+  logic enable;
+  logic [1:0] instruction_m1;
+  logic [1:0] instruction_m2;
+  logic [SLAVE_LEN-1:0] slave_select_m1;
+  logic [SLAVE_LEN-1:0] slave_select_m2;
+  logic [ADDRESS_LEN-1:0] slave_address_m1;
+  logic [ADDRESS_LEN-1:0] slave_address_m2;
+  logic [WORD_SIZE-1:0] data_from_core_m1;
+  logic [WORD_SIZE-1:0] data_from_core_m2;
+  logic [BURST_SIZE-1:0] burst_num_m1;
+  logic [BURST_SIZE-1:0] burst_num_m2;
+  logic [WORD_SIZE-1:0] data_to_core_m1;
+  logic [WORD_SIZE-1:0] data_to_core_m2;
+  logic rx_done_m1;
+  logic rx_done_m2;
+  logic tx_done_m1;
+  logic tx_done_m2;
+  logic new_rx_m1;
+  logic new_rx_m2;
+
+  // Instantiate the Top module
+  Top #(
+    .SLAVE_LEN(SLAVE_LEN),
+    .ADDRESS_LEN(ADDRESS_LEN),
+    .WORD_SIZE(WORD_SIZE),
+    .BURST_SIZE(BURST_SIZE),
+    .MAX_COUNT_CLK(MAX_COUNT_CLK)
+  ) uut (
+    .clk(clk),
+    .rst(rst),
+    .enable(enable),
+    .instruction_m1(instruction_m1),
+    .instruction_m2(instruction_m2),
+    .slave_select_m1(slave_select_m1),
+    .slave_select_m2(slave_select_m2),
+    .slave_address_m1(slave_address_m1),
+    .slave_address_m2(slave_address_m2),
+    .data_from_core_m1(data_from_core_m1),
+    .data_from_core_m2(data_from_core_m2),
+    .burst_num_m1(burst_num_m1),
+    .burst_num_m2(burst_num_m2),
+    .data_to_core_m1(data_to_core_m1),
+    .data_to_core_m2(data_to_core_m2),
+    .rx_done_m1(rx_done_m1),
+    .rx_done_m2(rx_done_m2),
+    .tx_done_m1(tx_done_m1),
+    .tx_done_m2(tx_done_m2),
+    .new_rx_m1(new_rx_m1),
+    .new_rx_m2(new_rx_m2)
+  );
+
+  // Clock generation
+  initial begin
+    clk = 0;
+    forever #5 clk = ~clk;
+  end
+
+  // Reset generation
+  initial begin
+    rst = 1;
+    #10 rst = 0;
+  end
+
+  // Stimulus
+  initial begin
+    // Add your stimulus here, set inputs, and observe outputs
+    // For example:
+    instruction_m1 = 2'b00;
+    // slave_select_m1 = 2'b01;
+    slave_address_m1 = 12'b0000_0000_000;
+    data_from_core_m1 = 8'b11001100;
+    burst_num_m1 = 12'b0000_0000_000;
+    enable = 1;
+    #100; // Wait for some time
+    // // Check the outputs
+    // $display("data_to_core_m1 = %h", data_to_core_m1);
+    // $display("rx_done_m1 = %h", rx_done_m1);
+    // $display("tx_done_m1 = %h", tx_done_m1);
+    $finish;
+  end
+
+endmodule

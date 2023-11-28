@@ -1,0 +1,6 @@
+set tool_name "ModelSim-Altera (SystemVerilog)"
+set corner_file_list {
+    {{"Slow -7 1.2V 100 Model"} {SystemBus_7_1200mv_100c_slow.svo SystemBus_7_1200mv_100c_v_slow.sdo}}
+    {{"Slow -7 1.2V -40 Model"} {SystemBus_7_1200mv_-40c_slow.svo SystemBus_7_1200mv_-40c_v_slow.sdo}}
+    {{"Fast -M 1.2V -40 Model"} {SystemBus_min_1200mv_-40c_fast.svo SystemBus_min_1200mv_-40c_v_fast.sdo}}
+}

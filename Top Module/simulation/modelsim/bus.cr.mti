@@ -1,0 +1,166 @@
+{D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Top
+
+Top level modules:
+	Top
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_wrapper.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_wrapper.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module slave_wrapper
+
+Top level modules:
+	slave_wrapper
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port_TB.sv} {0 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port_TB.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module master_out_port_tb
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port_TB.sv(16): (vlog-2730) Undefined variable: 'SLAVE_ADDR_SIZE'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port_TB.sv(17): (vlog-2730) Undefined variable: 'SLAVE_NO'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port_TB.sv(21): near "logic": syntax error, unexpected logic, expecting ';' or ','
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port_TB.sv(46): (vlog-2730) Undefined variable: 'rst'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port_TB.sv(47): (vlog-2730) Undefined variable: 'bus_grant'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port_TB.sv(47): (vlog-2730) Undefined variable: 'split_en'.
+
+
+} {4.0 5.0 6.0 7.0 8.0 10.0 11.0 12.0 13.0 14.0} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_in_port.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_in_port.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module slave_in_port
+
+Top level modules:
+	slave_in_port
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_in_port.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_in_port.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module master_in_port
+
+Top level modules:
+	master_in_port
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_out_port.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_out_port.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module slave_out_port
+
+Top level modules:
+	slave_out_port
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Top_tb
+
+Top level modules:
+	Top_tb
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_port.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_port.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module master_port
+
+Top level modules:
+	master_port
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/BRAM.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/BRAM.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module BRAM
+
+Top level modules:
+	BRAM
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Multiplexer.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Multiplexer.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InterConn_Multiplexer
+
+Top level modules:
+	InterConn_Multiplexer
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Arbitter.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Arbitter.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InterConn_Arbitter
+
+Top level modules:
+	InterConn_Arbitter
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv} {0 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module SystemBus
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(25): (vlog-2730) Undefined variable: 's_ready'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(26): (vlog-2730) Undefined variable: 's_valid'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(27): (vlog-2730) Undefined variable: 'instruction'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(29): (vlog-2730) Undefined variable: 'm_data'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(30): (vlog-2730) Undefined variable: 's_addr'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(31): (vlog-2730) Undefined variable: 'slave_id'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(32): (vlog-2730) Undefined variable: 's_data'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(33): (vlog-2730) Undefined variable: 'rx_data'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(34): (vlog-2730) Undefined variable: 'addr_bus'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(35): (vlog-2730) Undefined variable: 'w_data_bus'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(36): (vlog-2730) Undefined variable: 'burst_size_bus'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(37): (vlog-2730) Undefined variable: 'm_ready'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(38): (vlog-2730) Undefined variable: 'read_en'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(39): (vlog-2730) Undefined variable: 'write_en'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(40): (vlog-2730) Undefined variable: 'm_valid'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(41): (vlog-2730) Undefined variable: 'slave_select'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(42): (vlog-2730) Undefined variable: 'addr_done'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(43): (vlog-2730) Undefined variable: 'tx_done'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(44): (vlog-2730) Undefined variable: 'split_on'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(45): (vlog-2730) Undefined variable: 'burst_done'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(46): (vlog-2730) Undefined variable: 'm_b_tx_valid'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(47): (vlog-2730) Undefined variable: 'new_data_in'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(48): (vlog-2730) Undefined variable: 'new_data_out'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(49): (vlog-2730) Undefined variable: 'rx_done'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(50): (vlog-2730) Undefined variable: 'bus_req'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(51): (vlog-2730) Undefined variable: 'bus_grant'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(52): (vlog-2730) Undefined variable: 'bus_util'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(54): (vlog-2730) Undefined variable: 'split_en'.
+
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/SystemBus.sv(159): near "slave_wrapper": syntax error, unexpected IDENTIFIER, expecting .* or '.'
+
+} {4.0 5.0 6.0 7.0 8.0 9.0 10.0 11.0 12.0 13.0 14.0 15.0 16.0 17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0 31.0 32.0 33.0 34.0 35.0 36.0 37.0 38.0 39.0 40.0 41.0 42.0 43.0 44.0 45.0 46.0 47.0 48.0 49.0 50.0 51.0 52.0 53.0 54.0 55.0 56.0 57.0 58.0 59.0 60.0 61.0} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module master_out_port
+
+Top level modules:
+	master_out_port
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_port.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_port.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module slave_port
+
+Top level modules:
+	slave_port
+
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Wrapper.sv} {0 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Wrapper.sv}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InterConn_Wrapper
+** Error: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Wrapper.sv(190): near ")": syntax error, unexpected ')', expecting .* or '.'
+
+} {4.0 5.0} {}}

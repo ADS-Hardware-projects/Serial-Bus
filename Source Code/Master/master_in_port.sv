@@ -22,21 +22,18 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
 
     //global inputs
     input logic clk,
-    input logic rst_n,
+    input logic rst,
 
     //inputs from bus side
     input logic rx_data,
     input logic s_valid,
+	 input logic tx_done,
 
     //inputs from master core side
-
-    input logic [2:0] instruction,
+    input logic [1:0] instruction,
     input logic [BURST_SIZE-1:0] burst_size,
 
-
-    
-    //outputs to bus side
-
+	 //outputs to bus side
     output logic m_ready,
 
     
@@ -46,9 +43,6 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
     output logic new_data
 
 
-
-
-
 );
 
     logic [2:0] state= 3'b000;
@@ -56,20 +50,21 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
     parameter IDLE=0, READ= 1, RECIEVE = 2;
 
     integer bit_count =0;
-    integer word_count = 0;
+    integer burst_count = 0;
 
-    always @ (posedge clk) 
+    always @ (posedge clk or posedge rst) 
     begin
 
-        if (!rst_n)
+        if (rst)
         begin
             bit_count<=0;
-            word_count<=0;
+            burst_count<=0;
             s_data <=0;
             temp_data<= 0;
             m_ready <= 1;
             state <= IDLE;
             rx_done <= 0;
+				new_data <= 0;
         end
         else
         begin
@@ -77,28 +72,34 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
 
             IDLE:
             begin
-                if (instruction==3'b001 |instruction==3'b011 )
+                if (instruction== 2'b11 && tx_done == 1)
                 begin
-                    state <= READ;
-                    bit_count <=0;
-                    word_count<=0;
-                    // m_ready <=1;
-                    new_data <=0;
-                    rx_done <=0;
+							bit_count<=0;
+							burst_count<=0;
+							s_data <= s_data;
+							temp_data<= temp_data;
+							m_ready <= 1;
+							state <= READ;
+							rx_done <= 0;
+							new_data <= 0;
 
                 end
                 else
                 begin
-                    state <= IDLE;
-                    new_data <=0;
-                    rx_done <= 0;
-                    m_ready <= 1;
+							bit_count<= bit_count;
+							burst_count<= burst_count;
+							s_data <= s_data;
+							temp_data<= temp_data;
+							m_ready <= 1;
+							state <= IDLE;
+							rx_done <= 0;
+							new_data <= 0;
                 end
             end
 
             READ:
             begin
-                if (m_ready==1 && s_valid ==1)
+                if (m_ready==1 && s_valid == 1)
                 begin
                     state <= RECIEVE;
                     m_ready <= 0;
@@ -127,17 +128,17 @@ module master_in_port#(parameter WORD_SIZE=8, parameter BURST_SIZE=15 )(
                     s_data[bit_count] <= rx_data;
                     s_data[WORD_SIZE-2:0]<= temp_data[WORD_SIZE-2:0];
 
-                    if (word_count>= burst_size-1)
+                    if (burst_count>= burst_size-1)
                     begin
                         state <= IDLE;
                         rx_done <= 1;
-                        word_count <=0;
+                        burst_count <=0;
                         
                     end
 
                     else
                     begin
-                        word_count <= word_count+1;
+                        burst_count <= burst_count+1;
                         state <= RECIEVE;
                         m_ready <= 0;
                         rx_done <= 0;

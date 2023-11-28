@@ -121,7 +121,7 @@ always_ff @(posedge MASTER_CLK or posedge MASTER_RST) begin
 
     else begin // now if this is not reset and clock is ticking
         // the machine will act accrding to the state
-        case (arbiter_state)
+        case ( )
 
         IDLE_STATE: begin // if the machine in the IDLE state, look for next possible states
 
