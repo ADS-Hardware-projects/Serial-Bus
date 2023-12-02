@@ -1,16 +1,16 @@
 
 
 module input_commands #(parameter SLAVE_LEN=2, parameter ADDR_LEN=12, parameter DATA_LEN=8, parameter BURST_LEN=12)(
-	input clk, 
-	input reset,
+	input logic clk, 
+	input logic reset,
 	
-	input button1,
-	input button2,
-	input button3,
-	input [ADDR_LEN-1:0]switch_array,
-	input mode_switch,
-	input rw_switch1,
-	input rw_switch2,
+	input logic button1,
+	input logic button2,
+	input logic button3,
+	input logic [ADDR_LEN-1:0]switch_array,
+	input logic mode_switch,
+	input logic rw_switch1,
+	input logic rw_switch2,
 
 
 	output logic read1,
@@ -26,19 +26,19 @@ module input_commands #(parameter SLAVE_LEN=2, parameter ADDR_LEN=12, parameter 
 	output logic [SLAVE_LEN-1:0]slave2 = 1,
 	output logic [BURST_LEN:0]burst_num2 = 0);
 	
-reg [2:0]config_state = 0;
-reg [1:0]master = 1;
-reg [DATA_LEN-1:0]data = 0;
-reg [ADDR_LEN:0]address = 0;
-reg [SLAVE_LEN-1:0]slave = 1;
-reg [BURST_LEN:0]burst_num = 1;
+logic [2:0]config_state = 0;
+logic [1:0]master = 1;
+logic [DATA_LEN-1:0]data = 0;
+logic [ADDR_LEN:0]address = 0;
+logic [SLAVE_LEN-1:0]slave = 1;
+logic [BURST_LEN:0]burst_num = 1;
 
-reg button1_old = 0;
-reg button2_old = 0;
-reg button3_old = 0;
-wire button1_edge;
-wire button2_edge;
-wire button3_edge;
+logic button1_old = 0;
+logic button2_old = 0;
+logic button3_old = 0;
+logic button1_edge;
+logic button2_edge;
+logic button3_edge;
 assign button1_edge = (button1_old == 0 && button1 == 1) ? 1 : 0;
 assign button2_edge = (button2_old == 0 && button2 == 1) ? 1 : 0;
 assign button3_edge = (button3_old == 0 && button3 == 1) ? 1 : 0;

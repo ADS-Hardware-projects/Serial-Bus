@@ -17,7 +17,8 @@ module slave_port(
 	input logic rx_burst,
 	input logic [7:0]data_input,
 	
-	output logic s_valid, s_ready,
+	output reg s_valid,
+	output logic s_ready,
 	
 	output logic tx_data,
 	output logic [11:0]address,
@@ -25,7 +26,7 @@ module slave_port(
 	
 	output logic read_enable_in,
 	output logic write_enable_in,
-	output logic split_enable = 0);
+	output  reg split_enable = 0);
 	
 
 logic [11:0]burst_counter;
@@ -47,12 +48,12 @@ logic [4:0]burst_bit_counter = 4'd0;
 logic [2:0]burst_state = 0;
 
 localparam 
-IDLE = 1,
-GENERAL = 2,
-SPLIT = 3,
-VALID = 4,
-BURST_END = 5,
-BURST_BIT_RX = 6;        // states for burst count and port state machines
+IDLE = 0,
+GENERAL = 1,
+SPLIT = 2,
+VALID = 3,
+BURST_END = 4,
+BURST_BIT_RX = 5;        // states for burst count and port state machines
 
 	
 slave_in_port SLAVE_IN_PORT(

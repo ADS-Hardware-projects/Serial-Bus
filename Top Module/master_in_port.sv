@@ -22,8 +22,8 @@ module master_in_port #(parameter WORD_SIZE=8, parameter BURST_SIZE=12)(
 	
 	
 	
-reg [2:0]state = 0;
-reg [WORD_SIZE-1:0]temp_data;
+logic [2:0]state = 0;
+logic [WORD_SIZE-1:0]temp_data;
 parameter IDLE=0, WAIT_HANDSHAKE=1, RECEIVE_DATA=2;
 
 integer count = 0;

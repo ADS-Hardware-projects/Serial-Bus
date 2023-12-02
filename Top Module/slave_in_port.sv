@@ -22,9 +22,9 @@ logic [3:0]data_state = 4'd13;
   logic [3:0]data_counter = 4'd0 ;
 
 
-  logic handshake ;
+ 
 
-  assign handshake = s_ready && m_valid;
+  wire handshake = s_ready && m_valid;
   assign s_ready =  data_idle && address_idle;
   assign read_en_in = rx_done && read_en_in1 ;
   assign write_en_in = rx_done && write_en_in1;
@@ -40,7 +40,8 @@ logic [3:0]data_state = 4'd13;
  localparam IDLE = 13  , DATA_RX =3, DATA_BURST_GAP =4,
                    ADDR_RX = 1 , ADDR_INC_BURST=2 , ADDR_HS_WAIT=6 , READ_BURST_HS_WAIT =7;
 
-  always @(posedge clk or posedge reset) begin
+  always @(posedge clk or posedge reset) 
+  begin
 
     if (reset) 
 	 begin
@@ -97,19 +98,16 @@ logic [3:0]data_state = 4'd13;
 
             else
             begin 
-                if ((burst[0]==1) && handshake ==1 )
-						address_state <= ADDR_INC_BURST;
-                else if ((burst[0]==1) && handshake ==0)
-						address_state <= ADDR_HS_WAIT;
-                else begin
-                address_state <= IDLE;
+                if ((burst[0]==1) && handshake ==1 ) address_state <= ADDR_INC_BURST;
+                else if ((burst[0]==1) && handshake ==0) address_state <= ADDR_HS_WAIT;
+                else address_state <= IDLE;
                 address_counter <= 0;
                 address[address_counter] <= rx_address;
                 address_idle <= 1;
                 rx_done <=1 ;
                 burst_counter <= burst_counter + 1;
 
-                end
+                
             end
 
            
@@ -125,7 +123,8 @@ logic [3:0]data_state = 4'd13;
 
 
             end
-            else if((rx_done == 1) && (read_en_in1 == 1)) begin
+            else if((rx_done == 1) && (read_en_in1 == 1)) 
+				begin
                 address_state <= READ_BURST_HS_WAIT;
                 address_counter <= address_counter + 1;
                 rx_done <=  0;
@@ -152,15 +151,13 @@ logic [3:0]data_state = 4'd13;
 
             end
             else begin
-               if (address_counter == 1)
-               address_state  <= address_state;
-               else begin
-               address_state <= ADDR_INC_BURST;
+               if (address_counter == 1) address_state  <= address_state;
+               else address_state <= ADDR_INC_BURST;
                address_counter <= address_counter + 4'd1;
                address_idle <= 1;
                rx_done <= 0; 
                end
-            end
+            
         end
 
 
@@ -173,18 +170,20 @@ logic [3:0]data_state = 4'd13;
                 rx_done <= 0; 
 
             end
-            else begin
+            else 
+				begin
                if (burst_counter < burst[12:1])
                begin
-               address_state <= ADDR_HS_WAIT;
-               address_counter <= 0;
-               address_idle <= 1;
-               burst_counter <= burst_counter + 1;
-               address <= address + 1;
-               rx_done <= 1;
+						address_state <= ADDR_HS_WAIT;
+						address_counter <= 0;
+						address_idle <= 1;
+						burst_counter <= burst_counter + 1;
+						address <= address + 1;
+						rx_done <= 1;
 
                end
-               else begin
+               else 
+					begin
                 address_state <= IDLE;
                 address_counter <= 0;
                 address_idle <= 1;
@@ -214,9 +213,11 @@ logic [3:0]data_state = 4'd13;
   end
 
 
+
 always @ (posedge clk or posedge reset )
 begin
-    if (reset) begin
+    if (reset) 
+	 begin
     data_state <= IDLE;
     data_counter <= 0;
     data_idle <= 1;
@@ -247,14 +248,14 @@ begin
         if (data_counter < 4'd7 && write_en_in1 ==1)
         begin
             data_state <= data_state;
-            data_counter <= data_counter +1'd1;
+            data_counter <= data_counter + 4'd1;
             data[data_counter] <= rx_data;
             data_idle <= 0;
         end
 
-        else begin
-            if (burst_counter == 0 && write_en_in1 == 1)
-                data_state <= DATA_BURST_GAP;
+        else 
+		  begin
+            if (burst_counter == 0 && write_en_in1 == 1) data_state <= DATA_BURST_GAP;
             else
             begin
                 data_state <= IDLE;

@@ -43,8 +43,8 @@ module master_port #(parameter SLAVE_LEN=2, parameter ADDRESS_LEN=12, parameter 
 	);
 	
 	
-wire master_ready_IN;
-wire master_ready_OUT;
+logic master_ready_IN;
+logic master_ready_OUT;
 
 assign master_ready = master_ready_IN && master_ready_OUT;
 

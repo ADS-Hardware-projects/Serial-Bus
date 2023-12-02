@@ -1,5 +1,5 @@
 Flow report for SystemBus
-Tue Nov 28 21:39:52 2023
+Sat Dec 02 14:17:46 2023
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 28 21:39:52 2023       ;
+; Flow Status                        ; Successful - Sat Dec 02 14:17:46 2023       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; SystemBus                                   ;
-; Top-level Entity Name              ; Top_tb                                      ;
+; Top-level Entity Name              ; Top_combined                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29I7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 438 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 403 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 255 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 255                                         ;
-; Total pins                         ; 0 / 529 ( 0 % )                             ;
+; Total logic elements               ; 0 / 114,480 ( 0 % )                         ;
+;     Total combinational functions  ; 0 / 114,480 ( 0 % )                         ;
+;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                         ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 28 / 529 ( 5 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 98,304 / 3,981,312 ( 2 % )                  ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -65,39 +65,39 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/28/2023 21:38:55 ;
+; Start date & time ; 12/02/2023 14:17:17 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SystemBus           ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                             ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 161526888817441.170118773524404        ; --            ; --          ; --             ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Top_tb                                 ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; NOT_USED                               ; --            ; --          ; eda_simulation ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP               ; 100                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP               ; -40                                    ; --            ; --          ; --             ;
-; MISC_FILE                            ; BRAM.bsf                               ; --            ; --          ; --             ;
-; MISC_FILE                            ; BRAM_inst.v                            ; --            ; --          ; --             ;
-; MISC_FILE                            ; BRAM_bb.v                              ; --            ; --          ; --             ;
-; MISC_FILE                            ; BRAM.inc                               ; --            ; --          ; --             ;
-; MISC_FILE                            ; BRAM.cmp                               ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; Top_tb      ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; Top_tb      ; Top            ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; Top_tb      ; Top            ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; Top_tb                                 ; SystemBus     ; --          ; --             ;
-+--------------------------------------+----------------------------------------+---------------+-------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                              ;
++--------------------------------------+----------------------------------------+---------------+--------------+----------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name  ; Section Id     ;
++--------------------------------------+----------------------------------------+---------------+--------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 161526888817441.170150683701404        ; --            ; --           ; --             ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Top_tb                                 ; --            ; --           ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --           ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --           ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; NOT_USED                               ; --            ; --           ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --           ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 100                                    ; --            ; --           ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; -40                                    ; --            ; --           ; --             ;
+; MISC_FILE                            ; BRAM.bsf                               ; --            ; --           ; --             ;
+; MISC_FILE                            ; BRAM_inst.v                            ; --            ; --           ; --             ;
+; MISC_FILE                            ; BRAM_bb.v                              ; --            ; --           ; --             ;
+; MISC_FILE                            ; BRAM.inc                               ; --            ; --           ; --             ;
+; MISC_FILE                            ; BRAM.cmp                               ; --            ; --           ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --           ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; Top_combined ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; Top_combined ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; Top_combined ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --           ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --           ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --           ; --             ;
+; TOP_LEVEL_ENTITY                     ; Top_combined                           ; SystemBus     ; --           ; --             ;
++--------------------------------------+----------------------------------------+---------------+--------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -105,12 +105,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:34     ; 1.0                     ; 4905 MB             ; 00:00:16                           ;
-; Fitter                    ; 00:00:11     ; 1.1                     ; 6710 MB             ; 00:00:10                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4687 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.2                     ; 4991 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4660 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:52     ; --                      ; --                  ; 00:00:30                           ;
+; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 4739 MB             ; 00:00:07                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 6673 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4681 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4946 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4649 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:24     ; --                      ; --                  ; 00:00:18                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

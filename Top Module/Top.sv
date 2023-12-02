@@ -4,16 +4,16 @@ module Top (
 	input logic rst,
 	input logic enable,
 	
-	input button1_raw,
-	input button2_raw,
-	input button3_raw,
-	input [11:0]switch_array,
-	input mode_switch,
-	input rw_switch1,
-	input rw_switch2,
-	output scaled_clk,
-	output m1_busy,
-	output m2_busy
+	input logic button1_raw,
+	input logic button2_raw,
+	input logic button3_raw,
+	input logic [11:0]switch_array,
+	input logic mode_switch,
+	input logic rw_switch1,
+	input logic rw_switch2,
+	output logic scaled_clk,
+	output logic m1_busy,
+	output logic m2_busy
 
 	
 );
@@ -127,7 +127,7 @@ assign button3 = ~button3_raw;
 
 
 
-//scaledclock #(.maxcount(MAX_COUNT_CLK)) CLK_DIV(.inclk(clock), .ena(enable), .clk(clk));
+scaledclock #(.maxcount(MAX_COUNT_CLK)) CLK_DIV(.inclk(clock), .ena(enable), .clk(clk));
 //
 input_commands #(.SLAVE_LEN(SLAVE_LEN), .ADDR_LEN(ADDRESS_LEN), .DATA_LEN(WORD_SIZE), .BURST_LEN(BURST_SIZE)) C_INPUTS(
 	.clk(clk), 
@@ -356,7 +356,7 @@ slave_wrapper SLAVE_3(
 	.clk(clk), 
 	.reset(reset),
 
-	.slave_delay(6'd0),
+	.slave_delay(6'd10),
 
 	.read_enable(s3_read_en),
 	.write_enable(s3_write_en),

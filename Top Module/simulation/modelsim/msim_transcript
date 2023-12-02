@@ -16,6 +16,12 @@
 # 
 # Top level modules:
 # 	BRAM
+# vlog -sv -work work +incdir+D:/ACADEMICS/Sem7/ADS/System\ Bus\ design/Serial-Bus/Top\ Module {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/scaledclock.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module scaledclock
+# 
+# Top level modules:
+# 	scaledclock
 # vlog -sv -work work +incdir+D:/ACADEMICS/Sem7/ADS/System\ Bus\ design/Serial-Bus/Top\ Module {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_wrapper.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module slave_wrapper
@@ -40,6 +46,12 @@
 # 
 # Top level modules:
 # 	slave_in_port
+# vlog -sv -work work +incdir+D:/ACADEMICS/Sem7/ADS/System\ Bus\ design/Serial-Bus/Top\ Module {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Wrapper.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module InterConn_Wrapper
+# 
+# Top level modules:
+# 	InterConn_Wrapper
 # vlog -sv -work work +incdir+D:/ACADEMICS/Sem7/ADS/System\ Bus\ design/Serial-Bus/Top\ Module {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Multiplexer.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module InterConn_Multiplexer
@@ -100,18 +112,13 @@
 # 
 # Top level modules:
 # 	input_commands
-# vlog -sv -work work +incdir+D:/ACADEMICS/Sem7/ADS/System\ Bus\ design/Serial-Bus/Top\ Module {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Wrapper.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module InterConn_Wrapper
-# 
-# Top level modules:
-# 	InterConn_Wrapper
 # 
 vsim -L altera_mf_ver -do SystemBus_run_msim_rtl_verilog.do -l msim_transcript -gui work.Top_tb
 # vsim -L altera_mf_ver -do SystemBus_run_msim_rtl_verilog.do -l msim_transcript -gui work.Top_tb 
 # Loading sv_std.std
 # Loading work.Top_tb
 # Loading work.Top
+# Loading work.scaledclock
 # Loading work.input_commands
 # Loading work.master_module
 # Loading work.master_port
@@ -143,6 +150,12 @@ vsim -L altera_mf_ver -do SystemBus_run_msim_rtl_verilog.do -l msim_transcript -
 # 
 # Top level modules:
 # 	BRAM
+# vlog -sv -work work +incdir+D:/ACADEMICS/Sem7/ADS/System\ Bus\ design/Serial-Bus/Top\ Module {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/scaledclock.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module scaledclock
+# 
+# Top level modules:
+# 	scaledclock
 # vlog -sv -work work +incdir+D:/ACADEMICS/Sem7/ADS/System\ Bus\ design/Serial-Bus/Top\ Module {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_wrapper.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module slave_wrapper
@@ -167,6 +180,12 @@ vsim -L altera_mf_ver -do SystemBus_run_msim_rtl_verilog.do -l msim_transcript -
 # 
 # Top level modules:
 # 	slave_in_port
+# vlog -sv -work work +incdir+D:/ACADEMICS/Sem7/ADS/System\ Bus\ design/Serial-Bus/Top\ Module {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Wrapper.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module InterConn_Wrapper
+# 
+# Top level modules:
+# 	InterConn_Wrapper
 # vlog -sv -work work +incdir+D:/ACADEMICS/Sem7/ADS/System\ Bus\ design/Serial-Bus/Top\ Module {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Multiplexer.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module InterConn_Multiplexer
@@ -227,455 +246,74 @@ vsim -L altera_mf_ver -do SystemBus_run_msim_rtl_verilog.do -l msim_transcript -
 # 
 # Top level modules:
 # 	input_commands
-# vlog -sv -work work +incdir+D:/ACADEMICS/Sem7/ADS/System\ Bus\ design/Serial-Bus/Top\ Module {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Wrapper.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module InterConn_Wrapper
 # 
-# Top level modules:
-# 	InterConn_Wrapper
-# 
-add wave -position end  sim:/Top_tb/clk
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Tresh  Hostname: TRESHANROG  ProcessID: 14388
 # 
-#           Attempting to use alternate WLF file "./wlftcdgx0x".
+#           Attempting to use alternate WLF file "./wlft0771h7".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftcdgx0x
+#           Using alternate file: ./wlft0771h7
 # 
+# Paste insertion failed: sim:/top_tb/scaled_clk: (vish-4014) No objects found matching '/top_tb/scaled_clk'.
+# Paste insertion failed: sim:/top_tb/reset: (vish-4014) No objects found matching '/top_tb/reset'.
+# Paste insertion failed: sim:/top_tb/enable: (vish-4014) No objects found matching '/top_tb/enable'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/write_en: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/write_en'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/master_valid: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/master_valid'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/slave_ready: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/slave_ready'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/rx_address: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/rx_address'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/rx_data: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/rx_data'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/rx_burst: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/rx_burst'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/SLAVE_PORT/burst: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/SLAVE_PORT/burst'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/SLAVE_PORT/burst_bit_counter: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/SLAVE_PORT/burst_bit_counter'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/address: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/address'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/data: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/data'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/BRAM/address: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/BRAM/address'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/BRAM/data: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/BRAM/data'.
+# Paste insertion failed: sim:/top_tb/DUT/SLAVE_4K/BRAM/wren: (vish-4014) No objects found matching '/top_tb/DUT/SLAVE_4K/BRAM/wren'.
+add wave -position end  sim:/Top_tb/scaled_clk
 add wave -position end  sim:/Top_tb/reset
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-add wave -position end  sim:/Top_tb/button1_raw
-add wave -position end  sim:/Top_tb/button2_raw
-add wave -position end  sim:/Top_tb/button3_raw
-add wave -position end  sim:/Top_tb/mode_switch
-add wave -position end  sim:/Top_tb/rw_switch1
-add wave -position end  sim:/Top_tb/rw_switch2
-add wave -position end  sim:/Top_tb/switch_array
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-force -freeze sim:/Top_tb/switch_array 129 0
-# Invalid binary digit: 2.
-# ** Error: (vsim-4011) Invalid force value: 129 0.
-# 
-force -freeze sim:/Top_tb/switch_array 129 0
-# Invalid binary digit: 2.
-# ** Error: (vsim-4011) Invalid force value: 129 0.
-# 
-force -freeze sim:/Top_tb/switch_array 001001101111 0
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+add wave -position end  sim:/Top_tb/enable
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/write_enable
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/m_ready
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/s_ready
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/rx_address
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/rx_data
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/rx_burst
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/SLAVE_PORT/burst
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/SLAVE_PORT/burst_counter
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/address
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/data
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/BRAM/address
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/BRAM/data
+add wave -position end  sim:/Top_tb/DUT/SLAVE_1/BRAM/wren
 run -all
 # ** Note: $finish    : D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv(175)
-#    Time: 332230 ns  Iteration: 0  Instance: /Top_tb
+#    Time: 603830 ns  Iteration: 0  Instance: /Top_tb
+# 1
+# Break in Module Top_tb at D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv line 175
+restart
+# Loading sv_std.std
+# Loading work.Top_tb
+# Loading work.Top
+# Loading work.scaledclock
+# Loading work.input_commands
+# Loading work.master_module
+# Loading work.master_port
+# Loading work.master_in_port
+# Loading work.master_out_port
+# Loading work.event_handler
+# Loading work.InterConn_Wrapper
+# Loading work.InterConn_Arbitter
+# Loading work.InterConn_Multiplexer
+# Loading work.slave_wrapper
+# Loading work.slave_port
+# Loading work.slave_in_port
+# Loading work.slave_out_port
+# Loading work.BRAM
+run -all
+# ** Note: $finish    : D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv(175)
+#    Time: 603830 ns  Iteration: 0  Instance: /Top_tb
 # 1
 # Break in Module Top_tb at D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv line 175

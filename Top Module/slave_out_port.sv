@@ -8,11 +8,11 @@ module slave_out_port (
   logic data_idle;
 
 
-  logic handshake ;
+  
   logic slave_tx_done ;
   
  
-  assign handshake = s_valid && m_ready;
+  wire handshake = s_valid && m_ready;
   assign s_ready =  data_idle;
 
 
@@ -36,8 +36,8 @@ module slave_out_port (
             if (handshake == 1)
             begin
                 data_state <= DATA_TX;
-                tx_data <= data_input[0];
-                data_counter <= data_counter + 4'd1;
+                tx_data <= data_input[1];
+                data_counter <= data_counter + 4'd2;
                 data_idle <= 0;
                 s_tx_done <= 0;
 

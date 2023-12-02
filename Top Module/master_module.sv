@@ -31,15 +31,15 @@ module master_module #(parameter SLAVE_LEN=2, parameter ADDR_LEN=12, parameter D
 	output logic read_en);
 	
 	
-wire [1:0]instruction;
-wire [SLAVE_LEN-1:0]slave_select;
-wire [ADDR_LEN-1:0]address;
-wire [DATA_LEN-1:0]data_out;
-wire [BURST_LEN-1:0]burst_num;
-wire [DATA_LEN-1:0]data_in;
-wire rx_done;
-wire tx_done;
-wire new_rx;
+logic [1:0]instruction;
+logic [SLAVE_LEN-1:0]slave_select;
+logic [ADDR_LEN-1:0]address;
+logic [DATA_LEN-1:0]data_out;
+logic [BURST_LEN-1:0]burst_num;
+logic [DATA_LEN-1:0]data_in;
+logic rx_done;
+logic tx_done;
+logic new_rx;
 	
 
 master_port #(.SLAVE_LEN(SLAVE_LEN), .ADDRESS_LEN(ADDR_LEN), .WORD_SIZE(DATA_LEN), .BURST_SIZE(BURST_LEN)) MASTER_PORT(

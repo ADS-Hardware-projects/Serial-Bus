@@ -1,2 +1,2 @@
-Warning (10268): Verilog HDL information at slave_port.sv(92): always construct contains both blocking and non-blocking assignments File: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_port.sv Line: 92
+Warning (10268): Verilog HDL information at slave_port.sv(93): always construct contains both blocking and non-blocking assignments File: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_port.sv Line: 93
 Warning (10268): Verilog HDL information at InterConn_Arbitter.sv(131): always construct contains both blocking and non-blocking assignments File: D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Arbitter.sv Line: 131

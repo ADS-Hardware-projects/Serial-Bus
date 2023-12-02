@@ -21,10 +21,10 @@ module event_handler #(parameter SLAVE_LEN=2, parameter ADDR_LEN=12, parameter D
 	output logic [DATA_LEN-1:0]data_out=0,
 	output logic [BURST_LEN-1:0]burst_num=0);
 	
-reg [1:0]state = 0;
+logic [1:0]state = 0;
 parameter IDLE=0, WRITE_EVENT=1, READ_EVENT=2;
 
-reg [DATA_LEN-1:0]rx_val = 0; 
+logic [DATA_LEN-1:0]rx_val = 0; 
 
 //bin27 DISPLAY1 (.clock(clk), .reset(reset), .io_bin(rx_val[3:0]), .io_seven(display1_pin));
 //bin27 DISPLAY2 (.clock(clk), .reset(reset), .io_bin(rx_val[7:4]), .io_seven(display2_pin));

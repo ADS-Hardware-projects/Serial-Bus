@@ -58,29 +58,30 @@ module tb_Top_directToMaster;
   // Reset and enable generation
   initial begin
     clk = 0;
-    rst = 1;
+    rst = 0;
     enable = 0;
-    #10 rst = 0;
+    #10 rst = 1;
     #10 enable = 1;
-    #1000 $finish;
   end
 
   // Test scenario
   initial begin
-    // Customize your test scenario here
-    // For example:
     read1 = 0;
 	 write1 = 1;
 	 data1 = 8'd120;
-    address1 = 12'h42;
+    address1 = 12'd0;
 	 slave1 = 2'd0;
 	 burst_num1 = 13'd0;
+	 
+	 read2 = 0;
+	 write2 = 0;
+	 data2 = 8'd0;
+    address2 = 12'd0;
+	 slave2 = 2'd0;
+	 burst_num2 = 13'd0;
     // data1 = 8'hAB;
     // #20 read1 = 0;
 
-    // Repeat for other inputs and actions
-
-    // You can also add assertions or monitors to check the behavior
   end
 
 endmodule

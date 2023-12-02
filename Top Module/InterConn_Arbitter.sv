@@ -47,16 +47,16 @@ logic slave_sel_done;
 // State machine states (for reveiving the address)
 enum logic [1:0] {idle = 2'b00, addr_1 = 2'b01, addr_2 = 2'b10} state;
 
-reg [1:0] slave_addr_state = 2'b00;
+logic [1:0] slave_addr_state = 2'b00;
 wire start = M1_RQST || M2_RQST;
 
 wire split_en = S1_SPLIT_EN || S2_SPLIT_EN || S3_SPLIT_EN ; // No two slaves will issue a split at once
-reg split_enabled;
+logic split_enabled;
 
-reg previous_m1_grant;
-reg previous_m2_grant;
-reg [1:0]previous_grant;
-reg [1:0]previous_slave_sel;
+logic previous_m1_grant;
+logic previous_m2_grant;
+logic [1:0]previous_grant;
+logic [1:0]previous_slave_sel;
 
 /////////////////////////////////////////////////////////////////// RECEIVING ADDRESS OF THE SLAVE
 //SLAVE ADDRESS IS TWO BITS AS WE HAVE THREE SLAVES

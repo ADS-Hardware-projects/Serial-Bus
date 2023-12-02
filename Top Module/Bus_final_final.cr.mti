@@ -26,13 +26,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	slave_out_port
 
-} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_in_port.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_in_port.sv}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module master_in_port
-
-Top level modules:
-	master_in_port
-
 } {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/Top_tb.sv}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module Top_tb
@@ -40,40 +33,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	Top_tb
 
-} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_port.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_port.sv}
+} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Multiplexer.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Multiplexer.sv}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module master_port
+-- Compiling module InterConn_Multiplexer
 
 Top level modules:
-	master_port
-
-} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/scaledclock.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/scaledclock.sv}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module scaledclock
-
-Top level modules:
-	scaledclock
-
-} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/input_commands.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/input_commands.sv}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module input_commands
-
-Top level modules:
-	input_commands
-
-} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_module.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_module.sv}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module master_module
-
-Top level modules:
-	master_module
-
-} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Arbitter.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Arbitter.sv}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module InterConn_Arbitter
-
-Top level modules:
-	InterConn_Arbitter
+	InterConn_Multiplexer
 
 } {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_port.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/slave_port.sv}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -88,20 +53,6 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	BRAM
-
-} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/event_handler.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/event_handler.sv}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module event_handler
-
-Top level modules:
-	event_handler
-
-} {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/master_out_port.sv}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module master_out_port
-
-Top level modules:
-	master_out_port
 
 } {} {}} {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Wrapper.sv} {1 {vlog -work work -sv {D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/InterConn_Wrapper.sv}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012

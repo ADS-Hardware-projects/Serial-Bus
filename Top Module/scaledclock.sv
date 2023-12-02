@@ -1,9 +1,10 @@
 //File name : clock_divider.v
 //This module is used to convert a 50MHz clock to give out a 1Hz clock pulse.
 
-module scaledclock #(parameter maxcount=50000000)(input inclk,
-						 input ena,
-					    output reg clk = 1);
+module scaledclock #(parameter maxcount=50000000)(
+input logic inclk,
+input logic ena,
+output logic clk = 1);
 
 						 
 // input 10MHz clock and output 1Hz clk 

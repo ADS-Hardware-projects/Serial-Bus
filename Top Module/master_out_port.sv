@@ -32,8 +32,8 @@ module master_out_port #(parameter SLAVE_LEN = 2, parameter ADDRESS_LEN=12, para
 	
 	); 
 
-reg [4:0]state = 0;
-reg [WORD_SIZE-1:0]temp_data = 0;
+logic [4:0]state = 0;
+logic [WORD_SIZE-1:0]temp_data = 0;
 
 parameter IDLE=0, 
 			 WAIT_ARB=1, 

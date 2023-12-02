@@ -1,107 +1,5 @@
 
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_3|slave_port:SLAVE_PORT|burst_state
-Name burst_state.000 burst_state.BURST_BIT_RX burst_state.IDLE 
-burst_state.IDLE 0 0 0 
-burst_state.000 1 0 1 
-burst_state.BURST_BIT_RX 0 1 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_3|slave_port:SLAVE_PORT|port_state
-Name port_state.BURST_END port_state.VALID port_state.SPLIT port_state.GENERAL port_state.001 
-port_state.001 0 0 0 0 0 
-port_state.GENERAL 0 0 0 1 1 
-port_state.SPLIT 0 0 1 0 1 
-port_state.VALID 0 1 0 0 1 
-port_state.BURST_END 1 0 0 0 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_3|slave_port:SLAVE_PORT|slave_out_port:SLAVE_OUT_PORT|data_state
-Name data_state.DATA_TX data_state.IDLE data_state.0000 
-data_state.IDLE 0 0 0 
-data_state.DATA_TX 1 1 0 
-data_state.0000 0 1 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_3|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|data_state
-Name data_state.1101 data_state.DATA_RX data_state.DATA_BURST_GAP 
-data_state.1101 0 0 0 
-data_state.DATA_BURST_GAP 1 0 1 
-data_state.DATA_RX 1 1 0 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_3|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|address_state
-Name address_state.ADDR_RX address_state.READ_BURST_HS_WAIT address_state.ADDR_HS_WAIT address_state.ADDR_INC_BURST address_state.1101 
-address_state.1101 0 0 0 0 0 
-address_state.ADDR_INC_BURST 0 0 0 1 1 
-address_state.ADDR_HS_WAIT 0 0 1 0 1 
-address_state.READ_BURST_HS_WAIT 0 1 0 0 1 
-address_state.ADDR_RX 1 0 0 0 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_2|slave_port:SLAVE_PORT|burst_state
-Name burst_state.000 burst_state.BURST_BIT_RX burst_state.IDLE 
-burst_state.IDLE 0 0 0 
-burst_state.000 1 0 1 
-burst_state.BURST_BIT_RX 0 1 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_2|slave_port:SLAVE_PORT|port_state
-Name port_state.BURST_END port_state.VALID port_state.SPLIT port_state.GENERAL port_state.001 
-port_state.001 0 0 0 0 0 
-port_state.GENERAL 0 0 0 1 1 
-port_state.SPLIT 0 0 1 0 1 
-port_state.VALID 0 1 0 0 1 
-port_state.BURST_END 1 0 0 0 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_2|slave_port:SLAVE_PORT|slave_out_port:SLAVE_OUT_PORT|data_state
-Name data_state.DATA_TX data_state.IDLE data_state.0000 
-data_state.IDLE 0 0 0 
-data_state.DATA_TX 1 1 0 
-data_state.0000 0 1 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_2|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|data_state
-Name data_state.1101 data_state.DATA_RX data_state.DATA_BURST_GAP 
-data_state.1101 0 0 0 
-data_state.DATA_BURST_GAP 1 0 1 
-data_state.DATA_RX 1 1 0 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_2|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|address_state
-Name address_state.ADDR_RX address_state.READ_BURST_HS_WAIT address_state.ADDR_HS_WAIT address_state.ADDR_INC_BURST address_state.1101 
-address_state.1101 0 0 0 0 0 
-address_state.ADDR_INC_BURST 0 0 0 1 1 
-address_state.ADDR_HS_WAIT 0 0 1 0 1 
-address_state.READ_BURST_HS_WAIT 0 1 0 0 1 
-address_state.ADDR_RX 1 0 0 0 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_1|slave_port:SLAVE_PORT|burst_state
-Name burst_state.000 burst_state.BURST_BIT_RX burst_state.IDLE 
-burst_state.IDLE 0 0 0 
-burst_state.000 1 0 1 
-burst_state.BURST_BIT_RX 0 1 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_1|slave_port:SLAVE_PORT|port_state
-Name port_state.BURST_END port_state.VALID port_state.SPLIT port_state.GENERAL port_state.001 
-port_state.001 0 0 0 0 0 
-port_state.GENERAL 0 0 0 1 1 
-port_state.SPLIT 0 0 1 0 1 
-port_state.VALID 0 1 0 0 1 
-port_state.BURST_END 1 0 0 0 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_1|slave_port:SLAVE_PORT|slave_out_port:SLAVE_OUT_PORT|data_state
-Name data_state.DATA_TX data_state.IDLE data_state.0000 
-data_state.IDLE 0 0 0 
-data_state.DATA_TX 1 1 0 
-data_state.0000 0 1 1 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_1|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|data_state
-Name data_state.1101 data_state.DATA_RX data_state.DATA_BURST_GAP 
-data_state.1101 0 0 0 
-data_state.DATA_BURST_GAP 1 0 1 
-data_state.DATA_RX 1 1 0 
-
-State Machine - |Top_tb|Top:DUT|slave_wrapper:SLAVE_1|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|address_state
-Name address_state.ADDR_RX address_state.READ_BURST_HS_WAIT address_state.ADDR_HS_WAIT address_state.ADDR_INC_BURST address_state.1101 
-address_state.1101 0 0 0 0 0 
-address_state.ADDR_INC_BURST 0 0 0 1 1 
-address_state.ADDR_HS_WAIT 0 0 1 0 1 
-address_state.READ_BURST_HS_WAIT 0 1 0 0 1 
-address_state.ADDR_RX 1 0 0 0 1 
-
-State Machine - |Top_tb|Top:DUT|InterConn_Wrapper:BUS|InterConn_Arbitter:Arbitter1|arbiter_state
+State Machine - |Top_combined|InterConn_Wrapper:BUS|InterConn_Arbitter:Arbitter1|arbiter_state
 Name arbiter_state.SPLIT_BUSY_STATE arbiter_state.SPLIT_M2_GRANT_STATE arbiter_state.SPLIT_M1_GRANT_STATE arbiter_state.SPLIT_IDLE_STATE arbiter_state.BUS_BUSY_STATE arbiter_state.M2_RQST_STATE arbiter_state.M1_RQST_STATE arbiter_state.000 
 arbiter_state.000 0 0 0 0 0 0 0 0 
 arbiter_state.M1_RQST_STATE 0 0 0 0 0 0 1 1 
@@ -112,19 +10,19 @@ arbiter_state.SPLIT_M1_GRANT_STATE 0 0 1 0 0 0 0 1
 arbiter_state.SPLIT_M2_GRANT_STATE 0 1 0 0 0 0 0 1 
 arbiter_state.SPLIT_BUSY_STATE 1 0 0 0 0 0 0 1 
 
-State Machine - |Top_tb|Top:DUT|InterConn_Wrapper:BUS|InterConn_Arbitter:Arbitter1|slave_addr_state
+State Machine - |Top_combined|InterConn_Wrapper:BUS|InterConn_Arbitter:Arbitter1|slave_addr_state
 Name slave_addr_state.00 slave_addr_state.addr_2 slave_addr_state.addr_1 
 slave_addr_state.00 0 0 0 
 slave_addr_state.addr_1 1 0 1 
 slave_addr_state.addr_2 1 1 0 
 
-State Machine - |Top_tb|Top:DUT|master_module:MASTER2|event_handler:event_handle|state
-Name state.00 state.READ_EVENT state.WRITE_EVENT 
-state.00 0 0 0 
-state.WRITE_EVENT 1 0 1 
-state.READ_EVENT 1 1 0 
+State Machine - |Top_combined|data_alter_module:INCREMENT|data_alter:inc1|inc_state
+Name inc_state.00 inc_state.DATA_SEND inc_state.DISPLAY_AND_INCREMENT 
+inc_state.00 0 0 0 
+inc_state.DISPLAY_AND_INCREMENT 1 0 1 
+inc_state.DATA_SEND 1 1 0 
 
-State Machine - |Top_tb|Top:DUT|master_module:MASTER2|master_port:MASTER_PORT|master_out_port:MASTER_OUT_PORT|state
+State Machine - |Top_combined|data_alter_module:INCREMENT|master_port:MASTER_PORT|master_out_port:MASTER_OUT_PORT|state
 Name state.READ_WAIT state.FINISH state.TRANSMIT_DATA_BURST state.WAIT_HANDSHAKE_BURST state.BURST_START state.WAIT_BUS state.TX_B_NUM_FIRST state.TX_B_ADDR state.TX_ALL state.WAIT_FOR_HANDSHAKE state.WAIT_APPROVAL state.SELECT_SLAVE_STATE state.WAIT_ARB state.00000 
 state.00000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 state.WAIT_ARB 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
@@ -141,19 +39,53 @@ state.TRANSMIT_DATA_BURST 0 0 1 0 0 0 0 0 0 0 0 0 0 1
 state.FINISH 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
 state.READ_WAIT 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |Top_tb|Top:DUT|master_module:MASTER2|master_port:MASTER_PORT|master_in_port:MASTER_IN_PORT|state
+State Machine - |Top_combined|data_alter_module:INCREMENT|master_port:MASTER_PORT|master_in_port:MASTER_IN_PORT|state
 Name state.000 state.RECEIVE_DATA state.WAIT_HANDSHAKE 
 state.000 0 0 0 
 state.WAIT_HANDSHAKE 1 0 1 
 state.RECEIVE_DATA 1 1 0 
 
-State Machine - |Top_tb|Top:DUT|master_module:MASTER1|event_handler:event_handle|state
-Name state.00 state.READ_EVENT state.WRITE_EVENT 
-state.00 0 0 0 
-state.WRITE_EVENT 1 0 1 
-state.READ_EVENT 1 1 0 
+State Machine - |Top_combined|data_alter_module:INCREMENT|slave_port:SLAVE_PORT|burst_state
+Name burst_state.BURST_BIT_RX 
+burst_state.000 0 
+burst_state.BURST_BIT_RX 1 
 
-State Machine - |Top_tb|Top:DUT|master_module:MASTER1|master_port:MASTER_PORT|master_out_port:MASTER_OUT_PORT|state
+State Machine - |Top_combined|data_alter_module:INCREMENT|slave_port:SLAVE_PORT|port_state
+Name port_state.VALID port_state.SPLIT port_state.001 port_state.BURST_END 
+port_state.001 0 0 0 0 
+port_state.SPLIT 0 1 1 0 
+port_state.VALID 1 0 1 0 
+port_state.BURST_END 0 0 1 1 
+
+State Machine - |Top_combined|data_alter_module:INCREMENT|slave_port:SLAVE_PORT|slave_out_port:SLAVE_OUT_PORT|data_state
+Name data_state.DATA_TX data_state.IDLE data_state.0000 
+data_state.IDLE 0 0 0 
+data_state.DATA_TX 1 1 0 
+data_state.0000 0 1 1 
+
+State Machine - |Top_combined|data_alter_module:INCREMENT|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|data_state
+Name data_state.1101 data_state.DATA_RX data_state.DATA_BURST_GAP 
+data_state.1101 0 0 0 
+data_state.DATA_BURST_GAP 1 0 1 
+data_state.DATA_RX 1 1 0 
+
+State Machine - |Top_combined|data_alter_module:INCREMENT|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|address_state
+Name address_state.ADDR_RX address_state.READ_BURST_HS_WAIT address_state.ADDR_HS_WAIT address_state.ADDR_INC_BURST address_state.1101 
+address_state.1101 0 0 0 0 0 
+address_state.ADDR_INC_BURST 0 0 0 1 1 
+address_state.ADDR_HS_WAIT 0 0 1 0 1 
+address_state.READ_BURST_HS_WAIT 0 1 0 0 1 
+address_state.ADDR_RX 1 0 0 0 1 
+
+State Machine - |Top_combined|bridge_module:OUTPUT_BRIDGE|uart_bridge:BRIDGE|u_state
+Name u_state.UART_ACK_IN u_state.UART_ACK_OUT u_state.UART_DATA_OUT u_state.000 u_state.U_WAIT 
+u_state.000 0 0 0 0 0 
+u_state.UART_DATA_OUT 0 0 1 1 0 
+u_state.UART_ACK_OUT 0 1 0 1 0 
+u_state.UART_ACK_IN 1 0 0 1 0 
+u_state.U_WAIT 0 0 0 1 1 
+
+State Machine - |Top_combined|bridge_module:OUTPUT_BRIDGE|master_port:MASTER_PORT|master_out_port:MASTER_OUT_PORT|state
 Name state.READ_WAIT state.FINISH state.TRANSMIT_DATA_BURST state.WAIT_HANDSHAKE_BURST state.BURST_START state.WAIT_BUS state.TX_B_NUM_FIRST state.TX_B_ADDR state.TX_ALL state.WAIT_FOR_HANDSHAKE state.WAIT_APPROVAL state.SELECT_SLAVE_STATE state.WAIT_ARB state.00000 
 state.00000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 state.WAIT_ARB 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
@@ -170,23 +102,135 @@ state.TRANSMIT_DATA_BURST 0 0 1 0 0 0 0 0 0 0 0 0 0 1
 state.FINISH 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
 state.READ_WAIT 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |Top_tb|Top:DUT|master_module:MASTER1|master_port:MASTER_PORT|master_in_port:MASTER_IN_PORT|state
+State Machine - |Top_combined|bridge_module:OUTPUT_BRIDGE|master_port:MASTER_PORT|master_in_port:MASTER_IN_PORT|state
 Name state.000 state.RECEIVE_DATA state.WAIT_HANDSHAKE 
 state.000 0 0 0 
 state.WAIT_HANDSHAKE 1 0 1 
 state.RECEIVE_DATA 1 1 0 
 
-State Machine - |Top_tb|Top:DUT|input_commands:C_INPUTS|master
-Name master.10 
-master.01 0 
-master.10 1 
+State Machine - |Top_combined|bridge_module:OUTPUT_BRIDGE|slave_port:SLAVE_PORT|burst_state
+Name burst_state.BURST_BIT_RX 
+burst_state.000 0 
+burst_state.BURST_BIT_RX 1 
 
-State Machine - |Top_tb|Top:DUT|input_commands:C_INPUTS|config_state
-Name config_state.FINISH config_state.SELECT_BURST config_state.SELECT_DATA config_state.SELECT_ADDRESS config_state.SELECT_SLAVE config_state.SELECT_MASTER config_state.000 
-config_state.000 0 0 0 0 0 0 0 
-config_state.SELECT_MASTER 0 0 0 0 0 1 1 
-config_state.SELECT_SLAVE 0 0 0 0 1 0 1 
-config_state.SELECT_ADDRESS 0 0 0 1 0 0 1 
-config_state.SELECT_DATA 0 0 1 0 0 0 1 
-config_state.SELECT_BURST 0 1 0 0 0 0 1 
-config_state.FINISH 1 0 0 0 0 0 1 
+State Machine - |Top_combined|bridge_module:OUTPUT_BRIDGE|slave_port:SLAVE_PORT|port_state
+Name port_state.VALID port_state.SPLIT port_state.001 port_state.BURST_END 
+port_state.001 0 0 0 0 
+port_state.SPLIT 0 1 1 0 
+port_state.VALID 1 0 1 0 
+port_state.BURST_END 0 0 1 1 
+
+State Machine - |Top_combined|bridge_module:OUTPUT_BRIDGE|slave_port:SLAVE_PORT|slave_out_port:SLAVE_OUT_PORT|data_state
+Name data_state.DATA_TX data_state.IDLE data_state.0000 
+data_state.IDLE 0 0 0 
+data_state.DATA_TX 1 1 0 
+data_state.0000 0 1 1 
+
+State Machine - |Top_combined|bridge_module:OUTPUT_BRIDGE|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|data_state
+Name data_state.1101 data_state.DATA_RX data_state.DATA_BURST_GAP 
+data_state.1101 0 0 0 
+data_state.DATA_BURST_GAP 1 0 1 
+data_state.DATA_RX 1 1 0 
+
+State Machine - |Top_combined|bridge_module:OUTPUT_BRIDGE|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|address_state
+Name address_state.ADDR_RX address_state.READ_BURST_HS_WAIT address_state.ADDR_HS_WAIT address_state.ADDR_INC_BURST address_state.1101 
+address_state.1101 0 0 0 0 0 
+address_state.ADDR_INC_BURST 0 0 0 1 1 
+address_state.ADDR_HS_WAIT 0 0 1 0 1 
+address_state.READ_BURST_HS_WAIT 0 1 0 0 1 
+address_state.ADDR_RX 1 0 0 0 1 
+
+State Machine - |Top_combined|bridge_module:OUTPUT_BRIDGE|uart_port:UART_PORT|uart_rx:UART_RX|state
+Name state.STOP_BIT state.DATA_BITS state.START_BIT state.IDLE state.FINISH 
+state.IDLE 0 0 0 0 0 
+state.START_BIT 0 0 1 1 0 
+state.DATA_BITS 0 1 0 1 0 
+state.STOP_BIT 1 0 0 1 0 
+state.FINISH 0 0 0 1 1 
+
+State Machine - |Top_combined|bridge_module:OUTPUT_BRIDGE|uart_port:UART_PORT|uart_tx:UART_TX|state
+Name state.STOP_BIT state.DATA_BITS state.START_BIT state.IDLE state.FINISH 
+state.IDLE 0 0 0 0 0 
+state.START_BIT 0 0 1 1 0 
+state.DATA_BITS 0 1 0 1 0 
+state.STOP_BIT 1 0 0 1 0 
+state.FINISH 0 0 0 1 1 
+
+State Machine - |Top_combined|bridge_module:INPUT_BRIDGE|uart_bridge:BRIDGE|u_state
+Name u_state.UART_ACK_IN u_state.UART_ACK_OUT u_state.UART_DATA_OUT u_state.000 u_state.U_WAIT 
+u_state.000 0 0 0 0 0 
+u_state.UART_DATA_OUT 0 0 1 1 0 
+u_state.UART_ACK_OUT 0 1 0 1 0 
+u_state.UART_ACK_IN 1 0 0 1 0 
+u_state.U_WAIT 0 0 0 1 1 
+
+State Machine - |Top_combined|bridge_module:INPUT_BRIDGE|master_port:MASTER_PORT|master_out_port:MASTER_OUT_PORT|state
+Name state.READ_WAIT state.FINISH state.TRANSMIT_DATA_BURST state.WAIT_HANDSHAKE_BURST state.BURST_START state.WAIT_BUS state.TX_B_NUM_FIRST state.TX_B_ADDR state.TX_ALL state.WAIT_FOR_HANDSHAKE state.WAIT_APPROVAL state.SELECT_SLAVE_STATE state.WAIT_ARB state.00000 
+state.00000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.WAIT_ARB 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.SELECT_SLAVE_STATE 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.WAIT_APPROVAL 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.WAIT_FOR_HANDSHAKE 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.TX_ALL 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.TX_B_ADDR 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.TX_B_NUM_FIRST 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.WAIT_BUS 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.BURST_START 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.WAIT_HANDSHAKE_BURST 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.TRANSMIT_DATA_BURST 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.FINISH 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_WAIT 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Top_combined|bridge_module:INPUT_BRIDGE|master_port:MASTER_PORT|master_in_port:MASTER_IN_PORT|state
+Name state.000 state.RECEIVE_DATA state.WAIT_HANDSHAKE 
+state.000 0 0 0 
+state.WAIT_HANDSHAKE 1 0 1 
+state.RECEIVE_DATA 1 1 0 
+
+State Machine - |Top_combined|bridge_module:INPUT_BRIDGE|slave_port:SLAVE_PORT|burst_state
+Name burst_state.BURST_BIT_RX 
+burst_state.000 0 
+burst_state.BURST_BIT_RX 1 
+
+State Machine - |Top_combined|bridge_module:INPUT_BRIDGE|slave_port:SLAVE_PORT|port_state
+Name port_state.VALID port_state.SPLIT port_state.001 port_state.BURST_END 
+port_state.001 0 0 0 0 
+port_state.SPLIT 0 1 1 0 
+port_state.VALID 1 0 1 0 
+port_state.BURST_END 0 0 1 1 
+
+State Machine - |Top_combined|bridge_module:INPUT_BRIDGE|slave_port:SLAVE_PORT|slave_out_port:SLAVE_OUT_PORT|data_state
+Name data_state.DATA_TX data_state.IDLE data_state.0000 
+data_state.IDLE 0 0 0 
+data_state.DATA_TX 1 1 0 
+data_state.0000 0 1 1 
+
+State Machine - |Top_combined|bridge_module:INPUT_BRIDGE|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|data_state
+Name data_state.1101 data_state.DATA_RX data_state.DATA_BURST_GAP 
+data_state.1101 0 0 0 
+data_state.DATA_BURST_GAP 1 0 1 
+data_state.DATA_RX 1 1 0 
+
+State Machine - |Top_combined|bridge_module:INPUT_BRIDGE|slave_port:SLAVE_PORT|slave_in_port:SLAVE_IN_PORT|address_state
+Name address_state.ADDR_RX address_state.READ_BURST_HS_WAIT address_state.ADDR_HS_WAIT address_state.ADDR_INC_BURST address_state.1101 
+address_state.1101 0 0 0 0 0 
+address_state.ADDR_INC_BURST 0 0 0 1 1 
+address_state.ADDR_HS_WAIT 0 0 1 0 1 
+address_state.READ_BURST_HS_WAIT 0 1 0 0 1 
+address_state.ADDR_RX 1 0 0 0 1 
+
+State Machine - |Top_combined|bridge_module:INPUT_BRIDGE|uart_port:UART_PORT|uart_rx:UART_RX|state
+Name state.STOP_BIT state.DATA_BITS state.START_BIT state.IDLE state.FINISH 
+state.IDLE 0 0 0 0 0 
+state.START_BIT 0 0 1 1 0 
+state.DATA_BITS 0 1 0 1 0 
+state.STOP_BIT 1 0 0 1 0 
+state.FINISH 0 0 0 1 1 
+
+State Machine - |Top_combined|bridge_module:INPUT_BRIDGE|uart_port:UART_PORT|uart_tx:UART_TX|state
+Name state.STOP_BIT state.DATA_BITS state.START_BIT state.IDLE state.FINISH 
+state.IDLE 0 0 0 0 0 
+state.START_BIT 0 0 1 1 0 
+state.DATA_BITS 0 1 0 1 0 
+state.STOP_BIT 1 0 0 1 0 
+state.FINISH 0 0 0 1 1 
