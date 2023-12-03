@@ -1,5 +1,5 @@
 Flow report for SystemBus
-Sun Dec 03 14:24:42 2023
+Sun Dec 03 21:54:08 2023
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Dec 03 14:24:42 2023       ;
+; Flow Status                        ; Successful - Sun Dec 03 21:54:08 2023       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; SystemBus                                   ;
 ; Top-level Entity Name              ; Top_tb                                      ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/03/2023 14:23:49 ;
+; Start date & time ; 12/03/2023 21:53:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SystemBus           ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 161526888817441.170159362922164        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 161526888817441.170162060619732        ; --            ; --          ; --             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Top_tb                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
@@ -105,12 +105,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:30     ; 1.0                     ; 4894 MB             ; 00:00:16                           ;
-; Fitter                    ; 00:00:11     ; 1.1                     ; 6706 MB             ; 00:00:10                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4685 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.2                     ; 4988 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4659 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:47     ; --                      ; --                  ; 00:00:30                           ;
+; Analysis & Synthesis      ; 00:00:22     ; 1.0                     ; 4892 MB             ; 00:00:17                           ;
+; Fitter                    ; 00:00:09     ; 1.1                     ; 6706 MB             ; 00:00:11                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4686 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.2                     ; 4990 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4656 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:38     ; --                      ; --                  ; 00:00:34                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 Fitter report for SystemBus
-Sun Dec 03 14:24:32 2023
+Sun Dec 03 21:53:58 2023
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -67,7 +67,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Dec 03 14:24:32 2023       ;
+; Fitter Status                      ; Successful - Sun Dec 03 21:53:58 2023       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; SystemBus                                   ;
 ; Top-level Entity Name              ; Top_tb                                      ;
@@ -3243,9 +3243,9 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file D:/ACADEMICS/Sem7/ADS/System Bus design/Serial-Bus/Top Module/output_files/SystemBus.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 30 warnings
     Info: Peak virtual memory: 6706 megabytes
-    Info: Processing ended: Sun Dec 03 14:24:33 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Processing ended: Sun Dec 03 21:53:59 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +----------------------------+

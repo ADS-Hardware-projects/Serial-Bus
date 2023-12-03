@@ -129,8 +129,10 @@ begin
 				//data[count-1:0] <= data[count-1:0];
 				new_rx <= 1;
 				temp_data[count] <= rx_data;
+				//////////////////
+				
 				data[count] <= rx_data;
-				data[WORD_SIZE-2:0] <= temp_data[WORD_SIZE-2:0];
+				data[WORD_SIZE-2:0] <= temp_data[WORD_SIZE-2:0];  	//CHECK THIS
 				master_ready <= 1;
 				//read_en <= read_en;
 			end
@@ -142,6 +144,7 @@ begin
 				//data[count-1:0] <= data[count-1:0];
 				temp_data[count] <= rx_data;
 				data <= data;	
+				
 				//data[DATA_LEN-1:count+1] <= data[DATA_LEN-1:count+1];
 				rx_done <= rx_done;
 				new_rx <= new_rx;
