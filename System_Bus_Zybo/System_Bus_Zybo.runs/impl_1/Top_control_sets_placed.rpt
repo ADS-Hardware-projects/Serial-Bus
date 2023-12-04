@@ -1,0 +1,111 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Mon Dec  4 10:11:04 2023
+| Host         : TreshanROG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    33 |
+|    Minimum number of control sets                        |    33 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    79 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    33 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     4 |
+| >= 14 to < 16      |     4 |
+| >= 16              |    13 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              58 |           26 |
+| No           | No                    | Yes                    |             147 |           83 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              28 |           12 |
+| Yes          | No                    | Yes                    |             448 |          124 |
+| Yes          | Yes                   | No                     |              32 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+-------------------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|      Clock Signal     |                           Enable Signal                           |              Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+-------------------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|  clock_IBUF_BUFG      |                                                                   |                                           |                1 |              1 |         1.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_3/SLAVE_PORT/SLAVE_IN_PORT/E[0]                             |                                           |                1 |              4 |         4.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_3/SLAVE_PORT/SLAVE_IN_PORT/address_counter[3]_i_1__1_n_0    | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                2 |              4 |         2.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_3/SLAVE_PORT/SLAVE_IN_PORT/data_counter[3]_i_1__1_n_0       | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                2 |              4 |         2.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_2/SLAVE_PORT/SLAVE_IN_PORT/data_counter[3]_i_1__0_n_0       | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                1 |              4 |         4.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_2/SLAVE_PORT/SLAVE_IN_PORT/address_counter[3]_i_1__0_n_0    | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                1 |              4 |         4.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_1/SLAVE_PORT/SLAVE_IN_PORT/data_counter[3]_i_1_n_0          | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                1 |              4 |         4.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_1/SLAVE_PORT/SLAVE_IN_PORT/address_counter[3]_i_1_n_0       | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                2 |              4 |         2.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_3/SLAVE_PORT/SLAVE_OUT_PORT/data_counter[3]_i_1__4_n_0      |                                           |                2 |              6 |         3.00 |
+|  scaled_clk_OBUF_BUFG | BUS/Arbitter1/previous_slave_sel[1]_i_1_n_0                       |                                           |                3 |              6 |         2.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_2/SLAVE_PORT/SLAVE_OUT_PORT/data_counter[3]_i_1__3_n_0      |                                           |                3 |              6 |         2.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_1/SLAVE_PORT/SLAVE_OUT_PORT/data_counter[3]_i_1__2_n_0      |                                           |                3 |              6 |         2.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_3/SLAVE_PORT/SLAVE_IN_PORT/burst_counter[11]_i_1__1_n_0     | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                5 |             12 |         2.40 |
+|  scaled_clk_OBUF_BUFG | SLAVE_1/SLAVE_PORT/SLAVE_IN_PORT/burst_counter[11]_i_1_n_0        | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                2 |             12 |         6.00 |
+|  scaled_clk_OBUF_BUFG | SLAVE_2/SLAVE_PORT/SLAVE_IN_PORT/burst_counter[11]_i_1__0_n_0     | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                2 |             12 |         6.00 |
+|  scaled_clk_OBUF_BUFG | C_INPUTS/burst_num[11]_i_1_n_0                                    | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                4 |             12 |         3.00 |
+|  scaled_clk_OBUF_BUFG | MASTER2/event_handle/burst_num[11]_i_1__1_n_0                     | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                6 |             14 |         2.33 |
+|  scaled_clk_OBUF_BUFG | MASTER1/event_handle/burst_num[11]_i_1__0_n_0                     | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                6 |             14 |         2.33 |
+|  scaled_clk_OBUF_BUFG | C_INPUTS/data1[7]_i_1_n_0                                         | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                6 |             14 |         2.33 |
+|  scaled_clk_OBUF_BUFG | C_INPUTS/data2[7]_i_1_n_0                                         | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                8 |             14 |         1.75 |
+|  clock_IBUF_BUFG      | enable_IBUF                                                       | CLK_DIV/count                             |                8 |             32 |         4.00 |
+|  scaled_clk_OBUF_BUFG | MASTER2/MASTER_PORT/MASTER_OUT_PORT/ADR_DATA_COUNT[31]_i_1__0_n_0 | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                9 |             32 |         3.56 |
+|  scaled_clk_OBUF_BUFG | MASTER1/MASTER_PORT/MASTER_OUT_PORT/ADR_DATA_COUNT[31]_i_1_n_0    | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |               10 |             32 |         3.20 |
+|  scaled_clk_OBUF_BUFG | MASTER1/MASTER_PORT/MASTER_IN_PORT/count_1                        | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                6 |             32 |         5.33 |
+|  scaled_clk_OBUF_BUFG | MASTER2/MASTER_PORT/MASTER_IN_PORT/count_1                        | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                5 |             32 |         6.40 |
+|  scaled_clk_OBUF_BUFG | MASTER2/MASTER_PORT/MASTER_IN_PORT/burst_count_0                  | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                7 |             32 |         4.57 |
+|  scaled_clk_OBUF_BUFG | MASTER1/MASTER_PORT/MASTER_OUT_PORT/burst_count[31]_i_1__0_n_0    | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                6 |             32 |         5.33 |
+|  scaled_clk_OBUF_BUFG | MASTER2/MASTER_PORT/MASTER_OUT_PORT/burst_count[31]_i_1__2_n_0    | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                6 |             32 |         5.33 |
+|  scaled_clk_OBUF_BUFG | MASTER2/MASTER_PORT/MASTER_OUT_PORT/B_COUNT[31]_i_1__0_n_0        | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |               10 |             32 |         3.20 |
+|  scaled_clk_OBUF_BUFG | MASTER1/MASTER_PORT/MASTER_IN_PORT/burst_count_0                  | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |                7 |             32 |         4.57 |
+|  scaled_clk_OBUF_BUFG | MASTER1/MASTER_PORT/MASTER_OUT_PORT/B_COUNT[31]_i_1_n_0           | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |               10 |             32 |         3.20 |
+|  scaled_clk_OBUF_BUFG |                                                                   |                                           |               25 |             57 |         2.28 |
+|  scaled_clk_OBUF_BUFG |                                                                   | MASTER2/MASTER_PORT/MASTER_OUT_PORT/AR[0] |               83 |            147 |         1.77 |
++-----------------------+-------------------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+
+

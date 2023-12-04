@@ -1,0 +1,579 @@
+
+*** Running vivado
+    with args -log Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source Top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 474.965 ; gain = 200.988
+Command: read_checkpoint -auto_incremental -incremental D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.srcs/utils_1/imports/synth_1/bridge_module.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.srcs/utils_1/imports/synth_1/bridge_module.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24548
+WARNING: [Synth 8-11014] non-net output port 'instruction' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:18]
+WARNING: [Synth 8-11014] non-net output port 'slave_select' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:19]
+WARNING: [Synth 8-11014] non-net output port 'address' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:20]
+WARNING: [Synth 8-11014] non-net output port 'data_out' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:21]
+WARNING: [Synth 8-11014] non-net output port 'burst_num' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:22]
+WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'event_handler' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:25]
+WARNING: [Synth 8-11065] parameter 'WRITE_EVENT' becomes localparam in 'event_handler' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:25]
+WARNING: [Synth 8-11065] parameter 'READ_EVENT' becomes localparam in 'event_handler' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:25]
+WARNING: [Synth 8-11014] non-net output port 'data1' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:18]
+WARNING: [Synth 8-11014] non-net output port 'address1' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:19]
+WARNING: [Synth 8-11014] non-net output port 'slave1' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:20]
+WARNING: [Synth 8-11014] non-net output port 'burst_num1' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:21]
+WARNING: [Synth 8-11014] non-net output port 'data2' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:24]
+WARNING: [Synth 8-11014] non-net output port 'address2' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:25]
+WARNING: [Synth 8-11014] non-net output port 'slave2' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:26]
+WARNING: [Synth 8-11014] non-net output port 'burst_num2' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:27]
+WARNING: [Synth 8-11065] parameter 'SLAVE_NUM' becomes localparam in 'input_commands' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:53]
+WARNING: [Synth 8-11065] parameter 'BURST_MAX' becomes localparam in 'input_commands' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:54]
+WARNING: [Synth 8-11065] parameter 'IDLE_CONFIG' becomes localparam in 'input_commands' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:57]
+WARNING: [Synth 8-11065] parameter 'SELECT_MASTER' becomes localparam in 'input_commands' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:57]
+WARNING: [Synth 8-11065] parameter 'SELECT_SLAVE' becomes localparam in 'input_commands' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:57]
+WARNING: [Synth 8-11065] parameter 'SELECT_ADDRESS' becomes localparam in 'input_commands' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:57]
+WARNING: [Synth 8-11065] parameter 'SELECT_DATA' becomes localparam in 'input_commands' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:57]
+WARNING: [Synth 8-11065] parameter 'SELECT_BURST' becomes localparam in 'input_commands' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:58]
+WARNING: [Synth 8-11065] parameter 'FINISH' becomes localparam in 'input_commands' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:58]
+WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'master_in_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_in_port.sv:27]
+WARNING: [Synth 8-11065] parameter 'WAIT_HANDSHAKE' becomes localparam in 'master_in_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_in_port.sv:27]
+WARNING: [Synth 8-11065] parameter 'RECEIVE_DATA' becomes localparam in 'master_in_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_in_port.sv:27]
+WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:38]
+WARNING: [Synth 8-11065] parameter 'WAIT_ARB' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:39]
+WARNING: [Synth 8-11065] parameter 'SELECT_SLAVE_STATE' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:40]
+WARNING: [Synth 8-11065] parameter 'WAIT_APPROVAL' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:41]
+WARNING: [Synth 8-11065] parameter 'WAIT_FOR_HANDSHAKE' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:42]
+WARNING: [Synth 8-11065] parameter 'TX_ALL' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:43]
+WARNING: [Synth 8-11065] parameter 'TX_B_ADDR' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:44]
+WARNING: [Synth 8-11065] parameter 'TX_B_NUM_FIRST' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:45]
+WARNING: [Synth 8-11065] parameter 'WAIT_BUS' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:46]
+WARNING: [Synth 8-11065] parameter 'BURST_START' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:47]
+WARNING: [Synth 8-11065] parameter 'WAIT_HANDSHAKE_BURST' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:48]
+WARNING: [Synth 8-11065] parameter 'TRANSMIT_DATA_BURST' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:49]
+WARNING: [Synth 8-11065] parameter 'FINISH' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:50]
+WARNING: [Synth 8-11065] parameter 'READ_WAIT' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:51]
+WARNING: [Synth 8-11065] parameter 'INACTIVE' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:53]
+WARNING: [Synth 8-11065] parameter 'WRITE' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:53]
+WARNING: [Synth 8-11065] parameter 'READ' becomes localparam in 'master_out_port' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:53]
+WARNING: [Synth 8-11014] non-net output port 'clk' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/scaledclock.sv:7]
+WARNING: [Synth 8-11014] non-net output port 'read_en_in1' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:6]
+WARNING: [Synth 8-11014] non-net output port 'write_en_in1' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:7]
+WARNING: [Synth 8-11014] non-net output port 'address' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:8]
+WARNING: [Synth 8-11014] non-net output port 'data' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:9]
+WARNING: [Synth 8-11014] non-net output port 'burst_counter' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:10]
+WARNING: [Synth 8-11014] non-net output port 'address_counter' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:11]
+WARNING: [Synth 8-11014] non-net output port 'split_enable' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_port.sv:29]
+WARNING: [Synth 8-11014] non-net output port 'm_instruction' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:16]
+WARNING: [Synth 8-11014] non-net output port 'm_slave_select' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:17]
+WARNING: [Synth 8-11014] non-net output port 'm_address' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:18]
+WARNING: [Synth 8-11014] non-net output port 'm_data_out' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:19]
+WARNING: [Synth 8-11014] non-net output port 'm_burst_num' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:20]
+WARNING: [Synth 8-11014] non-net output port 's_datain' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:29]
+WARNING: [Synth 8-11014] non-net output port 'u_send_sig' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:37]
+WARNING: [Synth 8-11014] non-net output port 'u_data_out' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:38]
+WARNING: [Synth 8-11065] parameter 'M_IDLE' becomes localparam in 'uart_bridge' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:41]
+WARNING: [Synth 8-11065] parameter 'MASTER_OUT' becomes localparam in 'uart_bridge' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:41]
+WARNING: [Synth 8-11065] parameter 'U_IDLE' becomes localparam in 'uart_bridge' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:44]
+WARNING: [Synth 8-11065] parameter 'UART_DATA_OUT' becomes localparam in 'uart_bridge' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:44]
+WARNING: [Synth 8-11065] parameter 'UART_ACK_OUT' becomes localparam in 'uart_bridge' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:44]
+WARNING: [Synth 8-11065] parameter 'UART_ACK_IN' becomes localparam in 'uart_bridge' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:44]
+WARNING: [Synth 8-11065] parameter 'U_WAIT' becomes localparam in 'uart_bridge' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_bridge.sv:44]
+WARNING: [Synth 8-11014] non-net output port 'receive_signal' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_rx .sv:16]
+WARNING: [Synth 8-11014] non-net output port 'data' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_rx .sv:17]
+WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'uart_rx' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_rx .sv:19]
+WARNING: [Synth 8-11065] parameter 'START_BIT' becomes localparam in 'uart_rx' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_rx .sv:19]
+WARNING: [Synth 8-11065] parameter 'DATA_BITS' becomes localparam in 'uart_rx' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_rx .sv:19]
+WARNING: [Synth 8-11065] parameter 'STOP_BIT' becomes localparam in 'uart_rx' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_rx .sv:19]
+WARNING: [Synth 8-11065] parameter 'FINISH' becomes localparam in 'uart_rx' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_rx .sv:19]
+WARNING: [Synth 8-11014] non-net output port 'tx_busy' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_tx .sv:18]
+WARNING: [Synth 8-11014] non-net output port 'tx_data' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_tx .sv:19]
+WARNING: [Synth 8-11014] non-net output port 'tx_done' cannot be initialized at declaration in SystemVerilog mode [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_tx .sv:20]
+WARNING: [Synth 8-11065] parameter 'IDLE' becomes localparam in 'uart_tx' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_tx .sv:22]
+WARNING: [Synth 8-11065] parameter 'START_BIT' becomes localparam in 'uart_tx' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_tx .sv:22]
+WARNING: [Synth 8-11065] parameter 'DATA_BITS' becomes localparam in 'uart_tx' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_tx .sv:22]
+WARNING: [Synth 8-11065] parameter 'STOP_BIT' becomes localparam in 'uart_tx' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_tx .sv:22]
+WARNING: [Synth 8-11065] parameter 'FINISH' becomes localparam in 'uart_tx' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/uart_tx .sv:22]
+WARNING: [Synth 8-11065] parameter 'INC_IDLE' becomes localparam in 'data_alter' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/data_alter.sv:24]
+WARNING: [Synth 8-11065] parameter 'DISPLAY_AND_INCREMENT' becomes localparam in 'data_alter' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/data_alter.sv:25]
+WARNING: [Synth 8-11065] parameter 'DATA_SEND' becomes localparam in 'data_alter' with formal parameter declaration list [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/data_alter.sv:26]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1298.711 ; gain = 410.254
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/Top.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'scaledclock' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/scaledclock.sv:4]
+	Parameter maxcount bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'scaledclock' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/scaledclock.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'input_commands' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:3]
+	Parameter SLAVE_LEN bound to: 2 - type: integer 
+	Parameter ADDR_LEN bound to: 12 - type: integer 
+	Parameter DATA_LEN bound to: 8 - type: integer 
+	Parameter BURST_LEN bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'input_commands' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/input_commands.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'master_module' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_module.sv:2]
+	Parameter SLAVE_LEN bound to: 2 - type: integer 
+	Parameter ADDR_LEN bound to: 12 - type: integer 
+	Parameter DATA_LEN bound to: 8 - type: integer 
+	Parameter BURST_LEN bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'master_port' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_port.sv:5]
+	Parameter SLAVE_LEN bound to: 2 - type: integer 
+	Parameter ADDRESS_LEN bound to: 12 - type: integer 
+	Parameter WORD_SIZE bound to: 8 - type: integer 
+	Parameter BURST_SIZE bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'master_in_port' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_in_port.sv:6]
+	Parameter WORD_SIZE bound to: 8 - type: integer 
+	Parameter BURST_SIZE bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'master_in_port' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_in_port.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'master_out_port' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:2]
+	Parameter SLAVE_LEN bound to: 2 - type: integer 
+	Parameter ADDRESS_LEN bound to: 12 - type: integer 
+	Parameter WORD_SIZE bound to: 8 - type: integer 
+	Parameter BURST_SIZE bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'master_out_port' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_out_port.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'master_port' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_port.sv:5]
+INFO: [Synth 8-6157] synthesizing module 'event_handler' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:2]
+	Parameter SLAVE_LEN bound to: 2 - type: integer 
+	Parameter ADDR_LEN bound to: 12 - type: integer 
+	Parameter DATA_LEN bound to: 8 - type: integer 
+	Parameter BURST_LEN bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'event_handler' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'master_module' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/master_module.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'InterConn_Wrapper' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Wrapper.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'InterConn_Arbitter' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Arbitter.sv:1]
+INFO: [Synth 8-226] default block is never used [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Arbitter.sv:147]
+INFO: [Synth 8-6155] done synthesizing module 'InterConn_Arbitter' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Arbitter.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'InterConn_Multiplexer' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Multiplexer.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'InterConn_Multiplexer' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Multiplexer.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'InterConn_Wrapper' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Wrapper.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'slave_wrapper' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_wrapper.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'slave_port' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_port.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'slave_in_port' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'slave_in_port' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'slave_out_port' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_out_port.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'slave_out_port' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_out_port.sv:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_port.sv:95]
+INFO: [Synth 8-6155] done synthesizing module 'slave_port' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_port.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'BRAM' [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.runs/synth_1/.Xil/Vivado-22412-TreshanROG/realtime/BRAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BRAM' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.runs/synth_1/.Xil/Vivado-22412-TreshanROG/realtime/BRAM_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'slave_wrapper' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_wrapper.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/Top.sv:2]
+WARNING: [Synth 8-6014] Unused sequential element rx_val_reg was removed.  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/event_handler.sv:42]
+WARNING: [Synth 8-6014] Unused sequential element split_enabled_reg was removed.  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Arbitter.sv:142]
+WARNING: [Synth 8-7137] Register previous_m1_grant_reg in module InterConn_Arbitter has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Arbitter.sv:229]
+WARNING: [Synth 8-7137] Register previous_m2_grant_reg in module InterConn_Arbitter has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Arbitter.sv:230]
+WARNING: [Synth 8-7137] Register previous_grant_reg in module InterConn_Arbitter has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Arbitter.sv:231]
+WARNING: [Synth 8-7137] Register previous_slave_sel_reg in module InterConn_Arbitter has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/InterConn_Arbitter.sv:232]
+WARNING: [Synth 8-7137] Register address_reg in module slave_in_port has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:64]
+WARNING: [Synth 8-7137] Register rx_done_reg in module slave_in_port has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:29]
+WARNING: [Synth 8-7137] Register data_reg in module slave_in_port has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_in_port.sv:234]
+WARNING: [Synth 8-7137] Register tx_data_reg in module slave_out_port has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_out_port.sv:39]
+WARNING: [Synth 8-7137] Register data_counter_reg in module slave_out_port has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_out_port.sv:40]
+WARNING: [Synth 8-7137] Register data_idle_reg in module slave_out_port has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_out_port.sv:16]
+WARNING: [Synth 8-7137] Register s_tx_done_reg in module slave_out_port has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_out_port.sv:42]
+WARNING: [Synth 8-7137] Register burst_reg in module slave_port has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/slave_port.sv:223]
+WARNING: [Synth 8-7129] Port s_valid in module slave_in_port is either unconnected or has no load
+WARNING: [Synth 8-7129] Port address_load[12] in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port burst_num_load[12] in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[7] in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[6] in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[5] in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[4] in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[3] in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[2] in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[1] in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in[0] in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_done in module event_handler is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_done in module event_handler is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1413.324 ; gain = 524.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1413.324 ; gain = 524.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1413.324 ; gain = 524.867
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1413.324 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.gen/sources_1/ip/BRAM/BRAM/BRAM_in_context.xdc] for cell 'SLAVE_1/BRAM'
+Finished Parsing XDC File [d:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.gen/sources_1/ip/BRAM/BRAM/BRAM_in_context.xdc] for cell 'SLAVE_1/BRAM'
+Parsing XDC File [d:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.gen/sources_1/ip/BRAM/BRAM/BRAM_in_context.xdc] for cell 'SLAVE_2/BRAM'
+Finished Parsing XDC File [d:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.gen/sources_1/ip/BRAM/BRAM/BRAM_in_context.xdc] for cell 'SLAVE_2/BRAM'
+Parsing XDC File [d:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.gen/sources_1/ip/BRAM/BRAM/BRAM_in_context.xdc] for cell 'SLAVE_3/BRAM'
+Finished Parsing XDC File [d:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.gen/sources_1/ip/BRAM/BRAM/BRAM_in_context.xdc] for cell 'SLAVE_3/BRAM'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1496.652 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1496.652 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for SLAVE_1/BRAM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for SLAVE_2/BRAM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for SLAVE_3/BRAM. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'config_state_reg' in module 'input_commands'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'master_in_port'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'master_out_port'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'event_handler'
+INFO: [Synth 8-802] inferred FSM for state register 'slave_addr_state_reg' in module 'InterConn_Arbitter'
+INFO: [Synth 8-802] inferred FSM for state register 'arbiter_state_reg' in module 'InterConn_Arbitter'
+INFO: [Synth 8-802] inferred FSM for state register 'address_state_reg' in module 'slave_in_port'
+INFO: [Synth 8-802] inferred FSM for state register 'data_state_reg' in module 'slave_in_port'
+INFO: [Synth 8-802] inferred FSM for state register 'data_state_reg' in module 'slave_out_port'
+INFO: [Synth 8-802] inferred FSM for state register 'port_state_reg' in module 'slave_port'
+INFO: [Synth 8-802] inferred FSM for state register 'burst_state_reg' in module 'slave_port'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             IDLE_CONFIG |                              000 |                              000
+           SELECT_MASTER |                              001 |                              001
+            SELECT_SLAVE |                              010 |                              010
+          SELECT_ADDRESS |                              011 |                              011
+             SELECT_DATA |                              100 |                              100
+            SELECT_BURST |                              101 |                              101
+                  FINISH |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'config_state_reg' using encoding 'sequential' in module 'input_commands'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                              000
+          WAIT_HANDSHAKE |                               01 |                              001
+            RECEIVE_DATA |                               10 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'master_in_port'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                   00000000000001 |                            00000
+                WAIT_ARB |                   00000000000010 |                            00001
+      SELECT_SLAVE_STATE |                   00000000000100 |                            00010
+                WAIT_BUS |                   00000000001000 |                            01000
+           WAIT_APPROVAL |                   00000000010000 |                            00011
+      WAIT_FOR_HANDSHAKE |                   00000000100000 |                            00100
+                  TX_ALL |                   00000001000000 |                            00101
+               TX_B_ADDR |                   00000010000000 |                            00110
+          TX_B_NUM_FIRST |                   00000100000000 |                            00111
+    WAIT_HANDSHAKE_BURST |                   00001000000000 |                            01010
+     TRANSMIT_DATA_BURST |                   00010000000000 |                            01011
+                  FINISH |                   00100000000000 |                            01100
+             BURST_START |                   01000000000000 |                            01001
+               READ_WAIT |                   10000000000000 |                            01101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'master_out_port'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+             WRITE_EVENT |                               01 |                               01
+              READ_EVENT |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'event_handler'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+                  addr_1 |                              010 |                               01
+                  addr_2 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'slave_addr_state_reg' using encoding 'one-hot' in module 'InterConn_Arbitter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              IDLE_STATE |                              000 |                              000
+           M1_RQST_STATE |                              001 |                              001
+           M2_RQST_STATE |                              010 |                              010
+          BUS_BUSY_STATE |                              011 |                              011
+        SPLIT_IDLE_STATE |                              100 |                              100
+    SPLIT_M1_GRANT_STATE |                              101 |                              101
+    SPLIT_M2_GRANT_STATE |                              110 |                              110
+        SPLIT_BUSY_STATE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'arbiter_state_reg' using encoding 'sequential' in module 'InterConn_Arbitter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                             1101
+                 DATA_RX |                               01 |                             0011
+          DATA_BURST_GAP |                               10 |                             0100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'data_state_reg' using encoding 'sequential' in module 'slave_in_port'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00001 |                             1101
+                 ADDR_RX |                            00010 |                             0001
+            ADDR_HS_WAIT |                            00100 |                             0110
+      READ_BURST_HS_WAIT |                            01000 |                             0111
+          ADDR_INC_BURST |                            10000 |                             0010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'address_state_reg' using encoding 'one-hot' in module 'slave_in_port'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                             0000
+*
+                    IDLE |                               01 |                             1101
+                 DATA_TX |                               10 |                             0001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'data_state_reg' using encoding 'sequential' in module 'slave_out_port'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                                0 |                              000
+            BURST_BIT_RX |                                1 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'burst_state_reg' using encoding 'sequential' in module 'slave_port'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 GENERAL |                               00 |                              001
+                   SPLIT |                               01 |                              010
+                   VALID |                               10 |                              011
+               BURST_END |                               11 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'port_state_reg' using encoding 'sequential' in module 'slave_port'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 10    
+	   2 Input   13 Bit       Adders := 6     
+	   2 Input   12 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 12    
+	   2 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 10    
+	               13 Bit    Registers := 9     
+	               12 Bit    Registers := 10    
+	                8 Bit    Registers := 14    
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 12    
+	                2 Bit    Registers := 14    
+	                1 Bit    Registers := 69    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 20    
+	   3 Input   32 Bit        Muxes := 4     
+	  14 Input   32 Bit        Muxes := 6     
+	  45 Input   14 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 14    
+	   7 Input   13 Bit        Muxes := 4     
+	   2 Input   12 Bit        Muxes := 10    
+	   5 Input   12 Bit        Muxes := 9     
+	   2 Input    8 Bit        Muxes := 11    
+	   7 Input    8 Bit        Muxes := 2     
+	   3 Input    8 Bit        Muxes := 7     
+	  14 Input    8 Bit        Muxes := 2     
+	   5 Input    5 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 39    
+	   2 Input    4 Bit        Muxes := 27    
+	   3 Input    4 Bit        Muxes := 6     
+	   5 Input    4 Bit        Muxes := 3     
+	   4 Input    4 Bit        Muxes := 3     
+	  16 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 18    
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 87    
+	   7 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 15    
+	   8 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 146   
+	   7 Input    1 Bit        Muxes := 7     
+	   3 Input    1 Bit        Muxes := 41    
+	  14 Input    1 Bit        Muxes := 32    
+	   8 Input    1 Bit        Muxes := 16    
+	   5 Input    1 Bit        Muxes := 18    
+	   4 Input    1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port address_load[12] in module master_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port burst_num_load[12] in module master_module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data in module master_module is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |BRAM          |         3|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BRAM   |     3|
+|4     |BUFG   |     2|
+|5     |CARRY4 |   190|
+|6     |LUT1   |     9|
+|7     |LUT2   |   545|
+|8     |LUT3   |   161|
+|9     |LUT4   |   263|
+|10    |LUT5   |   246|
+|11    |LUT6   |   472|
+|12    |MUXF7  |     4|
+|13    |FDCE   |   687|
+|14    |FDPE   |    28|
+|15    |FDRE   |   178|
+|16    |IBUF   |    21|
+|17    |OBUF   |     3|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1496.652 ; gain = 608.195
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:35 . Memory (MB): peak = 1496.652 ; gain = 524.867
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 1496.652 ; gain = 608.195
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1496.652 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 194 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1496.652 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ad82ccc9
+INFO: [Common 17-83] Releasing license: Synthesis
+76 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 1496.652 ; gain = 986.680
+INFO: [Common 17-1381] The checkpoint 'D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.runs/synth_1/Top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  4 10:10:17 2023...

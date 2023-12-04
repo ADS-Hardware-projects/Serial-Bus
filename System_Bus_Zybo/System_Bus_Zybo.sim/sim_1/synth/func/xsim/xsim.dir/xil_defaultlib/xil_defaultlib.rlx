@@ -1,0 +1,5 @@
+0.7
+2020.2
+May  7 2023
+15:24:31
+D:/ACADEMICS/Sem7/ADS/System_Bus_Zybo/System_Bus_Zybo.sim/sim_1/synth/func/xsim/Top_tb_func_synth.v,1701665146,verilog,,,,BRAM;BRAM_blk_mem_gen_generic_cstr;BRAM_blk_mem_gen_prim_width;BRAM_blk_mem_gen_prim_wrapper_init;BRAM_blk_mem_gen_top;BRAM_blk_mem_gen_v8_4_6;BRAM_blk_mem_gen_v8_4_6_synth;InterConn_Arbitter;InterConn_Wrapper;Top;event_handler;event_handler_8;glbl;input_commands;master_in_port;master_in_port_9;master_module;master_module_0;master_out_port;master_out_port_10;master_port;master_port_7;scaledclock;slave_in_port;slave_in_port_2;slave_in_port_5;slave_out_port;slave_out_port_3;slave_out_port_6;slave_port;slave_port_1;slave_port_4;slave_wrapper;slave_wrapper__xdcDup__1;slave_wrapper__xdcDup__2,,,,,,,,

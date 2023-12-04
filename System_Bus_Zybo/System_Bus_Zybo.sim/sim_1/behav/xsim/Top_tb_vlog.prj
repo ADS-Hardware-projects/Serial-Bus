@@ -1,0 +1,34 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../System_Bus_Zybo.gen/sources_1/ip/BRAM/sim/BRAM.v" \
+
+sv xil_defaultlib  \
+"../../../../InterConn_Arbitter.sv" \
+"../../../../InterConn_Multiplexer.sv" \
+"../../../../InterConn_Wrapper.sv" \
+"../../../../event_handler.sv" \
+"../../../../input_commands.sv" \
+"../../../../master_in_port.sv" \
+"../../../../master_module.sv" \
+"../../../../master_out_port.sv" \
+"../../../../master_port.sv" \
+"../../../../scaledclock.sv" \
+"../../../../slave_in_port.sv" \
+"../../../../slave_out_port.sv" \
+"../../../../slave_port.sv" \
+"../../../../slave_wrapper.sv" \
+"../../../../Top.sv" \
+"../../../../uart_bridge.sv" \
+"../../../../uart_port.sv" \
+"../../../../uart_rx .sv" \
+"../../../../uart_tx .sv" \
+"../../../../bridge_module.sv" \
+"../../../../Top_tb.sv" \
+"../../../../data_alter.sv" \
+"../../../../data_alter_module.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
